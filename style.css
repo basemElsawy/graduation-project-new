@@ -95,6 +95,7 @@ body {
   top: 80%;
   color: white;
   z-index: 10;
+  margin-left: 10px;
 }
 
 .about-container {
