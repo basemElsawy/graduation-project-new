@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:wght@100;200;300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans', 'Roboto', 'Poppins';
+  box-sizing: border-box;
+  border: none;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* =========================HEADER SECTION-----NAVBAR=============== */
+.Orange-txt {
+  color: #ffae21;
+}
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #223341;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header img {
+  filter: invert(100%);
+  position: absolute;
+  bottom: -20%;
+  right: 49.5%;
+}
+.hlf {
+  font-weight: bolder;
+  color: #ffae21;
+}
+.logo {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  transition: 0.5s ease;
+}
+.navbar {
+  margin-right: 2rem;
+}
+.navbar li {
+  font-size: 1.2rem;
+  margin-top: 16px;
+
+  margin-right: 15px;
+  list-style: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease;
+}
+.navbar a:hover,
+.logo:hover {
+  color: #ffae21;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* ===================== Main section ------ About us-============== */
+
+.about-us {
+  display: flex;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.background-img {
+  background-image: url(barbell.jpg);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+
+  background-color: #223341;
+  position: relative;
+}
+.overlay-clr {
+  background-color: #22334180;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.headings {
+  position: absolute;
+  top: 80%;
+  color: white;
+  z-index: 10;
+}
+
+.about-container {
+  background-color: #223341;
+}
+.para-1 {
+  margin-top: 0px;
+  text-align: center;
+  padding: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+/* -------------================Section alignment=====-------------- */
+
+.sect-align {
+  background-color: #223341;
+  margin-top: 25px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  color: white;
+  text-align: justify;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* -------------================POWERLIFTING SECTION=====-------------- */
+.vertical-line {
+  height: 500px;
+  width: 5px;
+  background-color: white;
+  transform: translateY(30px);
+}
+.first-img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px 10px 0px 0px;
+}
+.heading {
+  text-align: center;
+  font-weight: bolder;
+}
+#p-lifting-header {
+  position: absolute;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  top: 35%;
+  left: 37%;
+
+  padding: 5px;
+  width: 20%;
+  background-color: #2233419f;
+}
+.con {
+  width: 500px;
+  height: 550px;
+  font-size: 1rem;
+}
+
+.paragraphs {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
+  margin-left: 70px;
+}
+
+/* --------==================BODY-BUILDING SECTION========--------- */
+
+.bodybuilding-heading {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  background-color: #223341;
+  padding: 10px;
+  border-radius: 0px 0px 0px 10px;
+}
+.Bodybuilding-section {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.white-bg-grid {
+  background-color: white;
+  color: #223341;
+}
+
+.calis-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+  margin-top: 10px;
+  padding: 0;
+  margin-left: -1px;
+  margin-top: -5px;
+}
+.para-2 {
+  width: 600px;
+}
+
+.aesth-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+
+  margin-top: 10px;
+  position: relative;
+}
+
+.calisthenics {
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  bottom: 52%;
+  left: 30%;
+}
+
+.aesthetics {
+  position: absolute;
+  z-index: 1;
+  /* top: 0; */
+  bottom: 20px;
+  color: white;
+  font-size: 2rem;
+  right: 35%;
+}
+
+/* -------------------------=============================SLIDER-SECTION===========------------------ */
+
+.slider-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-solid {
+  color: #ffae21;
+}
+.slide p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #223341;
+  border-radius: 0px 0px 15px 15px;
+  margin: 1px;
+}
+.slider {
+  width: 800px;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn {
+  cursor: pointer;
+  z-index: 1;
+  border: 3px solid #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #ffae21;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.navigation-auto div {
+  border: 3px solid #223341;
+  padding: 5px;
+  border: 10px;
+  transition: 1s;
+  border-radius: 10px;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 46px;
+  margin-top: 3px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #ffae21;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #ffae21;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #ffae21;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #ffae21;
+}
+/* --------------------------------------------------------------=====================COACHS SECTION=====================---------------------------------- */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 100px;
+  background-color: #223341;
+  color: white;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+.card {
+  border: none;
+}
+.card img {
+  border-radius: 10px 10px 0px 0px;
+}
+.coach-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.name {
+  background-color: #223341;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: 1px;
+}
+
+/* ---------------==========================SPORT SECTION==================--------------- */
+.sport-section {
+  margin-bottom: 100px;
+  margin-top: 50px;
+  display: flex;
+  transform: translateX(35px);
+  justify-content: center;
+}
+
+.section-seperator {
+  text-align: center;
+}
+.sport-section a > img {
+  transition: 0.5s ease;
+}
+.sport-section a {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  color: #1f3b5392;
+  font-weight: bold;
+}
+.sport-section a:hover {
+  color: #ffae21;
+}
+.power-link {
+  margin-left: 20px;
+}
+.sport-section a > img:hover {
+  filter: invert(80%) sepia(30%) saturate(11207%) hue-rotate(0deg)
+    brightness(95%) contrast(150%);
+  transform: scale(1.1);
+  color: #ffae21;
+}
+
+/* -----------===================FOOTER SECTION============------------ */
+
+hr {
+  width: 75%;
+  transform: translateX(200px);
+  opacity: 0.9;
+  background-color: #223341;
+}
+
+footer {
+  display: flex;
+
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.row2 {
+  transform: translateX(350px);
+  width: 50%;
+}
+
+.footer-content ul {
+  display: flex;
+  text-align: center;
+  margin-right: 10px;
+  justify-content: center;
+}
+.Contact-us {
+  text-align: center;
+  margin-top: 100px;
+}
+.footer-content ul > li {
+  margin-right: 35px;
+  list-style: none;
+}
+
+.footer-content a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f3c53;
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+.footer-content a:hover {
+  color: #ffae21;
+  opacity: 1;
+  cursor: pointer;
+}

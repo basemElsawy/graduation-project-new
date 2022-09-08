@@ -13,10 +13,12 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/7031694be7.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- ---------------------==============header section==========--------- -->
     <header class="header">
-      <div class="logo">Pocket-<span class="Orange-txt">Coach</span></div>
+      <div class="logo">Pocket-<span class="Orange-txt hlf">Coach</span></div>
 
       <img
         src="pictures used/muscle.png"
@@ -37,10 +39,14 @@
       <!-- -------------------------------about us-section-------------------------- -->
       <section class="about-us">
         <div class="background-img">
-          <h1>About us</h1>
-          <h2>The main idea about this whole website...!</h2>
+          <div class="headings">
+            <h1 >About <span class="Orange-txt">us</span></h1>
+          <h2 >The main idea about this whole website...!</h2>
+          
+          </div>
           <div class="overlay-clr"></div>
         </div>
+        <div class="about-container">
         <p class="para-1">
           Why did i start this? since every place that you go to willing to
           workout and keep a healthy lifestyle and specially in some places in
@@ -55,9 +61,11 @@
           wether you want to start bodybuilding,powerlifting or weightlifting
           and sooner or later we'll be adding more sports to the game .
         </p>
+      </div>
       </section>
       <!-- -----------------------------------Powerlifting-section--------------------------- -->
-      <section class="Powerlifting-sect">
+      <section class="Powerlifting-sect sect-align">
+        <div id="p-lifting-header">Power<span class="Orange-txt">lifting</span></div>
         <img
           src="pictures used/pexels-victor-freitas-949126.jpg"
           width="200px"
@@ -65,10 +73,9 @@
           class="first-img"
           alt=""
         />
-        <h1 class="p-lifting-header">Power<span>lifting</span></h1>
 
         <div class="paragraphs">
-          <div class="para-container">
+          <div class="comp-container con">
             <h2 class="competitions heading">
               <span class="Orange-txt">Comp</span>etitions
             </h2>
@@ -99,8 +106,8 @@
           </div>
           <div class="vertical-line"></div>
 
-          <div class="para-container">
-            <h2 class="Powerbuilding heading">
+          <div class="building-container con">
+            <h2 class="P-building heading">
               <span class="Orange-txt">Power</span>Building
             </h2>
             <p class="para-2">
@@ -131,19 +138,20 @@
       </section>
       <!-- -----------------------------------BodyBuilding-section--------------------------- -->
 
-      <section class="Bodybuilding-section">
-        <h1 class="heading-3"><span>Body</span>Building</h1>
-        <div class="container-0">
+      <section class="Bodybuilding-section sect-align">
+        <h1 class="bodybuilding-heading"><span class="Orange-txt">Body</span>Building</h1>
+        <div class="white-bg-grid">
+         <div class="calis-container">
           <img
             class="image-2"
             src="pictures used/hi res.png"
-            width="600px"
-            height="450px"
+            width="700px"
+            height="500px"
             alt=""
           />
 
-          <div><span class="Orange-txt">calis</span>thenics</div>
-          <p class="para-3">
+          <div class="calisthenics"><span class="Orange-txt">calis</span>thenics</div>
+          <p class="para-2 ">
             Calisthenics, also called Street Workout, gained worldwide
             reputation after 2008 video of Hannibal for King went viral on
             YouTube. Since then, increasingly more people have trained it as
@@ -156,8 +164,9 @@
             as Muscle Up. This is the sole idea of Calisthenics – to perform
             workouts with nothing else but your own body.
           </p>
-
-          <p class="para-3">
+        </div>
+        <div class="aesth-container">
+          <p class="para-2">
             If you’re trying to develop an aesthetic body, a great first step is
             to get a visual image of how you want to look. A good idea is to
             find bodybuilders or athletes that are similar in height to you.
@@ -178,16 +187,17 @@
             see in your mind.
           </p>
 
-          <div><span class="Orange-txt">aesth</span>etic</div>
+          <div class="aesthetics"><span class="Orange-txt">aesth</span>etic</div>
 
           <img
             class="image-3"
             src="pictures used/pexels-anush-gorak-1431282.jpg"
-            width="600px"
-            height="440px"
+            width="650px"
+            height="500px"
             alt=""
           />
-        </div>
+         </div>
+      </div>
       </section>
       <!--  ---------------------------------------======Slider-section=====--------------- -->
       <section class="slider-section">
@@ -260,9 +270,11 @@
       </section>
 
 
-      <h1 class="section-header">A variety of the finest <Span>coach's</Span>in the game</h1>
-      <section class="coachs-section">
+      <h1 class="section-header">A variety of the finest <Span class="Orange-txt">coachs</Span> in the game</h1>
+      <section class="coach-section">
+        
         <div class="coach-card1 card">
+          
           <img
             src="pictures used/istockphoto-1324042769-170667a.jpg"
             width="300px"
@@ -291,7 +303,7 @@
           <div class="name">Coach<span class="Orange-txt">#3</span></div>
         </div>
       </section>
-      <h1 class="section-seperator">Need guide to your path?</h1>
+      <h1 class="section-seperator">Need guide to your sport?</h1>
       <section class="sport-section">
         <a  href="BodyBuilding.html"
           ><img
@@ -302,7 +314,7 @@
             alt=""
           />BodyBuilding</a
         >
-        <a href="PowerLifting.html"
+        <a class="power-link" href="PowerLifting.html"
           ><img
           id="p-lifting"
             src="pictures used/weightlifting.png "
@@ -314,30 +326,31 @@
         >
       </section>
     </main>
+    <hr class="row">
     <footer>
-        <hr class="row">
         <div class="footer-content">
             <ul id="footer-links">
-              <li><a class="footer-links1">Refrences</a></li>
+              <li><a class="footer-link1">Refrences</a></li>
               <span class="v-row"></span>
-              <li><a class="footer-links2">About</a></li>
+              <li><a class="footer-link2">About</a></li>
               <span class="v-row"></span>
-              <li><a class="footer-links3">Home</a></li>
+              <li><a class="footer-link3">Home</a></li>
             </ul>
             <div class="languages">
             <h4 class="Contact-us">Contact Us</h4>
             <ul id="contact-links">
               <li><a class="contact-links1">Facebook <i class="fa-brands fa-facebook"></i></a></li>
-              <span class="v-row vrow vrow1"></span>
+              <span class="v-row vrow "></span>
               <li><a class="contact-links2">Instagram <i class="fa-brands fa-square-instagram"></i></a></li>
               <span class="v-row vrow"></span>
               <li><a class="contact-links3">Twitter <i class="fa-brands fa-square-twitter"></i></a></li>
              
             </ul>
           </div>
-          <hr class="row2">
         </div>
-    </footer>
+      </footer>
+      <hr class="row2">
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/7031694be7.js" crossorigin="anonymous"></script>
   </body>
 </html>
