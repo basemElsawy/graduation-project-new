@@ -196,7 +196,7 @@ body {
   margin-right: 40px;
   margin-top: 10px;
   padding: 0;
-  margin-left: -1px;
+  margin-left: -3px;
   margin-top: -5px;
 }
 .para-2 {
@@ -357,9 +357,9 @@ body {
   margin-bottom: 100px;
   background-color: #223341;
   color: white;
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-  border-radius: 10px;
+  /* margin-left: 2.5rem; */
+  /* margin-right: 2.5rem; */
+  /* border-radius: 10px; */
   padding: 10px;
 }
 .card {
@@ -395,6 +395,7 @@ body {
 
 .section-seperator {
   text-align: center;
+  opacity: 0.7;
 }
 .sport-section a > img {
   transition: 0.5s ease;
@@ -469,4 +470,14 @@ footer {
   color: #ffae21;
   opacity: 1;
   cursor: pointer;
+}
+
+#v-line {
+  width: 0.1rem;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -10;
+  background-color: #1f3c53;
+  height: 30px;
+  transform: translateX(-20px);
 }
