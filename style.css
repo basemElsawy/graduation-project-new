@@ -25,6 +25,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: 0.3s ease;
 }
 .header img {
   filter: invert(100%);
@@ -44,6 +45,7 @@ body {
 .navbar {
   margin-right: 2rem;
   display: flex;
+  transition: 0.3s ease;
 }
 .navbar li {
   font-size: 1.2rem;
@@ -358,9 +360,9 @@ body {
   margin-bottom: 100px;
   background-color: #223341;
   color: white;
-  /* margin-left: 2.5rem; */
-  /* margin-right: 2.5rem; */
-  /* border-radius: 10px; */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 10px;
   padding: 10px;
 }
 .card {
