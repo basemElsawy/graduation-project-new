@@ -13,7 +13,48 @@ body {
 /* ---------============== MAIN CONTENT =================---------- */
 
 .main-content {
-  height: 3000px;
+  height: 2500px;
+  margin-top: 20px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin-bottom: 50px; */
+}
+.gear-content {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.merch-container {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+.container {
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #223341;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 40px 0px #223341;
+}
+.container button {
+  background-color: #223341;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+.container button:hover {
+  color: #ffae21;
+  cursor: pointer;
 }
 .headers {
   transform: translateY(-90px);
@@ -25,7 +66,7 @@ body {
   height: 17%;
 
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   background-image: url(pictures/gear.jpg);
   background-size: cover;
   background-position: 0px -200px;
@@ -33,7 +74,7 @@ body {
 }
 .overlay-clr {
   background-color: #223341;
-  opacity: 0.7;
+  opacity: 0.8;
 
   position: relative;
   width: 100%;

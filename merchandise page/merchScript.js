@@ -23,8 +23,8 @@ let scrollFunction = () => {
     header.style.boxShadow = 'none';
   }
   if (
-    document.body.scrollTop > 750 ||
-    document.documentElement.scrollTop > 750
+    document.body.scrollTop > 600 ||
+    document.documentElement.scrollTop > 600
   ) {
     header.style.borderRadius = '0px 0px 10px 10px';
     header.style.marginRight = '10px';
