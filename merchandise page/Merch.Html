@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+b<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -50,7 +50,7 @@
             <h4>Black basic T-shirts</h4>
             <p>All Sizes Available</p>
             <hr />
-            <div><span class="prices">20.99</span>$</div>
+            <span class="price-tags">20</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
           <div class="container">
@@ -58,7 +58,7 @@
             <h4>Black sporting T-shirt</h4>
             <p>size XL,L,M</p>
             <hr />
-            <div><span class="prices">25.40</span>$</div>
+            <span id="price-tag2">25</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
           <div class="container">
@@ -66,7 +66,7 @@
             <h4>Dark grey sporting T-shirt</h4>
             <p>size XL,L,M</p>
             <hr />
-            <div><span class="prices">20.99</span>$</div>
+            <span class="price-tags">20</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <h4>basic creamy white T-shirt</h4>
             <p>size XL,L,M</p>
             <hr />
-            <div><span class="prices">17.99</span>$</div>
+            <span class="price-tags"> 17 </span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
           <div class="container">
@@ -89,7 +89,7 @@
             <h4>Off-White basic T-shirt</h4>
             <p>All sizes available</p>
             <hr />
-            <div><span class="prices">17.99</span>$</div>
+            <span id="price-tag5">17</span>
 
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
@@ -103,8 +103,8 @@
             <h4>Dark Blue shorts</h4>
             <p>XXL,XL,L</p>
 
-            <div><span class="prices">34.99</span>$</div>
             <hr />
+            <span class="price-tags">34</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
         </div>
@@ -119,7 +119,7 @@
             <h4>Black sporting shorts</h4>
             <p>All sizes available</p>
             <hr />
-            <div><span class="prices">37.75</span>$</div>
+            <span class="price-tags">37</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
           <div class="container">
@@ -132,9 +132,10 @@
             <h4>Yellow basic T-shirt</h4>
             <p>All sizes available</p>
             <hr />
-            <div><span class="prices">18.35</span>$</div>
+            <span class="price-tags">18</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
+
           <div class="container">
             <img
               src="pictures/lifting-belt 2.jpg"
@@ -145,7 +146,7 @@
             <h4>Weightlifting belt</h4>
             <p>All sizes available</p>
             <hr />
-            <div><span class="prices">59.75</span>$</div>
+            <span class="prices-tags">59</span>
             <button type="button" class="add-cart">Add To-Cart</button>
           </div>
         </div>
@@ -159,10 +160,24 @@
           <h4>Weightlifting belt</h4>
           <p>All sizes available</p>
           <hr />
-          <div><span class="prices">45.60</span>$</div>
+          <span class="price-tags">45</span>
           <button type="button" class="add-cart">Add To-Cart</button>
         </div>
       </section>
+      <div class="cart-container">
+        <div class="shopping-cart">
+          <button class="cart-btn" type="button">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+          </button>
+          <span id="merch-count">0</span>
+        </div>
+      </div>
+      <div class="side-bar">
+        <span>
+          <button type="button" class="close-sidebar">&times;</button></span
+        >
+        <div class="checkout-menu"></div>
+      </div>
     </main>
     <footer>
       <section class="footer-section">
@@ -202,10 +217,10 @@
         <a href="Home.html">About us</a>
       </button>
     </footer>
-    <script src="merchScript.js"></script>
     <script
       src="https://kit.fontawesome.com/7031694be7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="merchScript.js"></script>
   </body>
 </html>

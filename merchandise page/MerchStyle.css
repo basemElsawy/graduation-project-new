@@ -7,6 +7,7 @@
   /* overflow-x: hidden; */
 }
 body {
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -19,19 +20,54 @@ body {
   /* justify-content: center; */
   /* align-items: center; */
   /* margin-bottom: 50px; */
+  position: relative;
 }
 .gear-content {
   margin-top: 50px;
-  background-color: #2233416c;
+  background-color: #7193aca1;
   padding: 50px;
-  margin-right: 2.5rem;
-  margin-left: 2.5rem;
+  margin-right: 6rem;
+  margin-left: 6rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.cart-btn {
+  /* padding: 10px; */
+  background-color: #223341;
+  color: white;
+  border: none;
+  transition: 0.5s ease;
+  font-size: 1.5rem;
+}
+.cart-btn:hover {
+  color: #ffae21;
+  cursor: pointer;
+}
+.cart-container {
+  position: relative;
+  transition: 0.5s ease;
+}
+.shopping-cart {
+  width: 80px;
+  border-radius: 10px 0px 0px 10px;
+  position: fixed;
+
+  right: 0;
+  top: 50%;
+
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-color: #223341;
+  transition: 0.5s ease;
+}
+
 .merch-container {
   display: flex;
   justify-content: space-around;
@@ -45,6 +81,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   transition: 0.5s ease;
+  margin-right: 70px;
 }
 .container:hover {
   transform: scale(1.05);
@@ -92,8 +129,51 @@ body {
   height: 100%;
 }
 
-main {
-}
 hr {
   width: 100%;
+}
+
+.side-bar {
+  position: absolute;
+  background-color: #223341;
+  border-radius: 10px 0px 0px 10px;
+  width: 30%;
+  top: 700px;
+  bottom: 500px;
+  right: 0px;
+  z-index: 9999;
+  transition: 0.5s ease;
+  margin-left: 5rem;
+  /* box-shadow: 30px 0px 40px 50px #2233419b; */
+
+  /* display: inline; */
+}
+.side-bar span {
+  color: white;
+  font-size: 3rem;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.close-sidebar {
+  background-color: #223341;
+  border: none;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease;
+  font-size: 3rem;
+}
+.close-sidebar:hover {
+  color: #ffae21;
+  cursor: pointer;
+}
+.checkout-menu {
+  background-color: white;
+  height: 95%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: 90%;
 }
