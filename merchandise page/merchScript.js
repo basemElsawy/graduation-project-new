@@ -25,10 +25,13 @@ addToCart.forEach((btn) => {
 });
 cartBtn.addEventListener('click', () => {
   sideCheckoutMenu.style.width = '30%';
+  shoppingCart.style.marginRight = '30%';
+  // shoppingCart.style.textAlign = 'left';
 });
 
 closeBtn.addEventListener('click', () => {
   sideCheckoutMenu.style.width = '0%';
+  shoppingCart.style.marginRight = '0%';
 });
 
 //---------================= SCROLLING FUNCTIONALITY=======-------------------
@@ -36,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   window.onscroll = function () {
     scrollFunction();
   };
+  sideCheckoutMenu.style.width = '0%';
 });
 
 let scrollFunction = () => {
