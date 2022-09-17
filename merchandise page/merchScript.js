@@ -8,18 +8,26 @@ let cartBtn = document.querySelector('.cart-btn');
 let merchCounter = document.getElementById('merch-count');
 let prices = document.querySelectorAll('.price-tags');
 let products = document.querySelectorAll('.container');
-let addToCart = document.querySelectorAll('.add-cart');
+let addToCartBtn = document.querySelectorAll('.add-cart');
 let sideCheckoutMenu = document.querySelector('.side-bar');
 let closeBtn = document.querySelector('.close-sidebar');
+let chosenMerch = document.querySelector('chosen-merch');
 //-------------------========== VARIABLES =========----------------
 
-prices[0].innerText = Number(prices[0].innerText);
+prices[0].innerText = Number(prices[1].innerText);
 merchCounter.innerText = Number(merchCounter.innerText);
-
+let addItemId = 0;
 let counter = 1;
 //------------============== MERCH FUNCTIONALITY =========-------------
-addToCart.forEach((btn) => {
+
+addToCartBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
+    for (let i = 0; i <= products.length; i++) {
+      let cartItems = document.createElement('div');
+      cartItems.classList.add('cart-items');
+      chosenMerch.appendChild(cartItems);
+      cartItems.append(products[idx]);
+    }
     merchCounter.innerText++;
   });
 });
