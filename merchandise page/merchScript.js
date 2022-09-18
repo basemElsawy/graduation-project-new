@@ -13,9 +13,9 @@ let sideCheckoutMenu = document.querySelector('.side-bar');
 let closeBtn = document.querySelector('.close-sidebar');
 let chosenMerch = document.querySelector('chosen-merch');
 let cartItems = document.getElementById('chosen-merch');
+let removeBtn = document.querySelectorAll('.remove-btn');
 //-------------------========== VARIABLES =========----------------
 
-prices[0].innerText = Number(prices[1].innerText);
 merchCounter.innerText = Number(merchCounter.innerText);
 let addItemId = 0;
 let counter = 1;
@@ -30,15 +30,29 @@ addToCartBtn.forEach((btn, idx) => {
 
 function merchFunctionalty(idx) {
   let productsParent = products[idx].parentElement;
+  let productsNode = products[idx];
+  let clone = productsNode.cloneNode(true);
+  let cloneAddCartBtn = clone.childNodes[14];
+  let cloneRemoveItem = clone.childNodes[12];
+  document.getElementById('chosen-merch').append(clone);
 
-  document.getElementById('chosen-merch').append(products[idx]);
-  if (productsParent.parentElement.classList.contains('chosen-merch')) {
-    let inCartItems = document.createElement('div');
-    inCartItems.classList.add('items-chosen');
-    let itemsChosen = document.querySelector('.items-chosen');
-    console.log(itemsChosen);
+  clone.style.transform = 'scale(0.8)';
+  clone.style.width = '100%';
+  clone.style.marginBottom = '-50px';
+  clone.style.marginTop = '-25px';
+  clone.style.fontSize = '1.5rem';
+  cloneAddCartBtn.style.display = 'none';
+  cloneRemoveItem.style.display = 'flex';
+  cloneRemoveItem.style.justifyContent = 'center';
+  cloneRemoveItem.style.width = '100%';
 
-    itemsChosen.transform = 'scale(0.2)';
+  // removeBtnfunc(idx);
+}
+function removeBtnfunc(idx) {
+  if (products[idx].cloneNode(true) === true) {
+    let clone = products[idx].cloneNode(true);
+
+    clone.lastChild.style.display = 'none';
   }
 }
 
