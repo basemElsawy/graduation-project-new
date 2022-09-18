@@ -12,6 +12,7 @@ let addToCartBtn = document.querySelectorAll('.add-cart');
 let sideCheckoutMenu = document.querySelector('.side-bar');
 let closeBtn = document.querySelector('.close-sidebar');
 let chosenMerch = document.querySelector('chosen-merch');
+let cartItems = document.getElementById('chosen-merch');
 //-------------------========== VARIABLES =========----------------
 
 prices[0].innerText = Number(prices[1].innerText);
@@ -22,15 +23,25 @@ let counter = 1;
 
 addToCartBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    for (let i = 0; i <= products.length; i++) {
-      let cartItems = document.createElement('div');
-      cartItems.classList.add('cart-items');
-      chosenMerch.appendChild(cartItems);
-      cartItems.append(products[idx]);
-    }
+    merchFunctionalty(idx);
     merchCounter.innerText++;
   });
 });
+
+function merchFunctionalty(idx) {
+  let productsParent = products[idx].parentElement;
+
+  document.getElementById('chosen-merch').append(products[idx]);
+  if (productsParent.parentElement.classList.contains('chosen-merch')) {
+    let inCartItems = document.createElement('div');
+    inCartItems.classList.add('items-chosen');
+    let itemsChosen = document.querySelector('.items-chosen');
+    console.log(itemsChosen);
+
+    itemsChosen.transform = 'scale(0.2)';
+  }
+}
+
 cartBtn.addEventListener('click', () => {
   sideCheckoutMenu.style.width = '30%';
   shoppingCart.style.marginRight = '30%';
