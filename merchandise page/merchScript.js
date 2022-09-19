@@ -14,6 +14,8 @@ let closeBtn = document.querySelector('.close-sidebar');
 let chosenMerch = document.querySelector('chosen-merch');
 let cartItems = document.getElementById('chosen-merch');
 let removeBtn = document.querySelectorAll('.remove-btn');
+let merchTotal = document.querySelector('.merch-total');
+let fees = document.querySelector('.fees');
 //-------------------========== VARIABLES =========----------------
 
 merchCounter.innerText = Number(merchCounter.innerText);
@@ -24,6 +26,7 @@ let counter = 1;
 addToCartBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     merchFunctionalty(idx);
+
     merchCounter.innerText++;
   });
 });
@@ -32,7 +35,7 @@ function merchFunctionalty(idx) {
   let productsParent = products[idx].parentElement;
   let productsNode = products[idx];
   let clone = productsNode.cloneNode(true);
-  let cloneAddCartBtn = clone.childNodes[14];
+  let cloneAddCart = clone.childNodes[14];
   let cloneRemoveItem = clone.childNodes[12];
   document.getElementById('chosen-merch').append(clone);
 
@@ -41,21 +44,19 @@ function merchFunctionalty(idx) {
   clone.style.marginBottom = '-50px';
   clone.style.marginTop = '-25px';
   clone.style.fontSize = '1.5rem';
-  cloneAddCartBtn.style.display = 'none';
+  cloneAddCart.style.display = 'none';
   cloneRemoveItem.style.display = 'flex';
   cloneRemoveItem.style.justifyContent = 'center';
   cloneRemoveItem.style.width = '100%';
-
-  // removeBtnfunc(idx);
+  cloneRemoveItem.style.color = '#ff6b7a';
 }
-function removeBtnfunc(idx) {
-  if (products[idx].cloneNode(true) === true) {
-    let clone = products[idx].cloneNode(true);
-
-    clone.lastChild.style.display = 'none';
-  }
+function merchTotalFunc(idx) {
+  merchTotal.innerText =
+    Number(merchTotal.innerText) + Number(prices[idx].textContent);
 }
-
+removeBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {});
+});
 cartBtn.addEventListener('click', () => {
   sideCheckoutMenu.style.width = '30%';
   shoppingCart.style.marginRight = '30%';
