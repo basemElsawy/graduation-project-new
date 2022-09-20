@@ -26,8 +26,9 @@ body {
   margin-top: 50px;
   background-color: #7193aca1;
   padding: 50px;
-  margin-right: 6rem;
-  margin-left: 6rem;
+
+  margin-right: 2rem;
+  margin-left: 2rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -229,6 +230,10 @@ hr {
   height: 250px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
+}
+.merch-container {
+  width: 100%;
 }
 .cartImg > img {
   width: 100px;
@@ -242,4 +247,8 @@ hr {
   color: #ff6b7a;
 }
 .hidden {
+}
+
+.payment {
+  margin-top: 50px;
 }

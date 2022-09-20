@@ -25,38 +25,56 @@ let counter = 1;
 
 addToCartBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    merchFunctionalty(idx);
-
     merchCounter.innerText++;
+    let productsParent = products[idx].parentElement;
+    let productsNode = products[idx];
+    let clone = productsNode.cloneNode(true);
+    // get elements using the qury selector as the child [] might be changed and was throwing an error for the first row , most right item .
+
+    let cloneAddCart = clone.querySelector('.add-cart');
+    let cloneRemoveItem = clone.querySelector('.remove-btn');
+
+    document.getElementById('chosen-merch').append(clone);
+
+    cloneAddCart.style.display = 'none';
+    clone.style.transform = 'scale(0.8)';
+    clone.style.width = '100%';
+    clone.style.marginBottom = '-50px';
+    clone.style.marginTop = '-25px';
+    clone.style.fontSize = '1.5rem';
+
+    cloneRemoveItem.style.display = 'flex';
+    cloneRemoveItem.style.justifyContent = 'center';
+    cloneRemoveItem.style.width = '100%';
+    cloneRemoveItem.style.color = '#ff6b7a';
+    merchTotalFunc(idx);
+    // you need to set the event listener after cloning
+    cloneRemoveItem.addEventListener('click', () => {
+      clone.remove();
+      merchCounter.innerText--;
+
+      if (merchCounter.innerText <= 0) {
+        merchCounter.innerText = 0;
+      }
+    });
   });
 });
 
-function merchFunctionalty(idx) {
-  let productsParent = products[idx].parentElement;
-  let productsNode = products[idx];
-  let clone = productsNode.cloneNode(true);
-  let cloneAddCart = clone.childNodes[14];
-  let cloneRemoveItem = clone.childNodes[12];
-  document.getElementById('chosen-merch').append(clone);
-
-  clone.style.transform = 'scale(0.8)';
-  clone.style.width = '100%';
-  clone.style.marginBottom = '-50px';
-  clone.style.marginTop = '-25px';
-  clone.style.fontSize = '1.5rem';
-  cloneAddCart.style.display = 'none';
-  cloneRemoveItem.style.display = 'flex';
-  cloneRemoveItem.style.justifyContent = 'center';
-  cloneRemoveItem.style.width = '100%';
-  cloneRemoveItem.style.color = '#ff6b7a';
-}
 function merchTotalFunc(idx) {
   merchTotal.innerText =
-    Number(merchTotal.innerText) + Number(prices[idx].textContent);
+    Number(merchTotal.innerText) + Number(prices[idx].value);
 }
-removeBtn.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {});
-});
+
+// this one was not workig as it loads on the already existing remove btn and assign the event listener ( even before the items were added to the cart )
+/*removeBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+	  
+console.log ("item clicked for remove ");
+	  
+	  
+  });
+  });*/
+
 cartBtn.addEventListener('click', () => {
   sideCheckoutMenu.style.width = '30%';
   shoppingCart.style.marginRight = '30%';
