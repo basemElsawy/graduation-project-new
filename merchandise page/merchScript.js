@@ -16,11 +16,13 @@ let cartItems = document.getElementById('chosen-merch');
 let removeBtn = document.querySelectorAll('.remove-btn');
 let merchTotal = document.querySelector('.merch-total');
 let fees = document.querySelector('.fees');
+let totalPayment = document.querySelector('.total');
 //-------------------========== VARIABLES =========----------------
 
 merchCounter.innerText = Number(merchCounter.innerText);
 let addItemId = 0;
 let counter = 1;
+let feesPrecentage = Number(parseFloat(0.15));
 //------------============== MERCH FUNCTIONALITY =========-------------
 
 addToCartBtn.forEach((btn, idx) => {
@@ -49,12 +51,26 @@ addToCartBtn.forEach((btn, idx) => {
     cloneRemoveItem.style.color = '#ff6b7a';
     merchTotalFunc(idx);
     // you need to set the event listener after cloning
+
+    feesFunc();
+    // fees.innerText = Number(cloneCount) * Number(feesPrecentage);
+    totalPayment.innerText =
+      Number(merchTotal.innerText) + Number(fees.innerText);
     cloneRemoveItem.addEventListener('click', () => {
       clone.remove();
+      fees.innerText = Number(fees.innerText) - Number(feesPrecentage);
+      fees.innerText = parseFloat(fees.innerText).toFixed(2);
+      totalPayment.innerText =
+        Number(merchTotal.innerText) -
+        Number(prices[idx].innerText) -
+        Number(fees.innerText);
       merchCounter.innerText--;
-
+      merchTotal.innerText =
+        Number(merchTotal.innerText) - Number(prices[idx].innerText);
       if (merchCounter.innerText <= 0) {
         merchCounter.innerText = 0;
+      } else if (merchTotal.innerText <= 0) {
+        merchTotal.innerText = 0;
       }
     });
   });
@@ -62,7 +78,11 @@ addToCartBtn.forEach((btn, idx) => {
 
 function merchTotalFunc(idx) {
   merchTotal.innerText =
-    Number(merchTotal.innerText) + Number(prices[idx].value);
+    Number(merchTotal.innerText) + Number(prices[idx].innerText);
+}
+function feesFunc() {
+  fees.innerText = Number(fees.innerText) + Number(feesPrecentage);
+  fees.innerText = parseFloat(fees.innerText).toFixed(2);
 }
 
 // this one was not workig as it loads on the already existing remove btn and assign the event listener ( even before the items were added to the cart )
