@@ -62,8 +62,7 @@ addToCartBtn.forEach((btn, idx) => {
       fees.innerText = parseFloat(fees.innerText).toFixed(2);
       totalPayment.innerText =
         Number(merchTotal.innerText) -
-        Number(prices[idx].innerText) -
-        Number(fees.innerText);
+        (Number(prices[idx].innerText) - Number(fees.innerText));
       merchCounter.innerText--;
       merchTotal.innerText =
         Number(merchTotal.innerText) - Number(prices[idx].innerText);
