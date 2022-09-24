@@ -45,42 +45,70 @@
         <h1 class="box-header">
           Bmr and Bmi <span class="Orange-txt">TEST</span>
         </h1>
-        <div class="bg-clr">
-          <form class="form" action="url">
-            <label for="Firstname">First Name</label>
-            <input
-              type="text"
-              name="Firstname"
-              class="input"
-              placeholder="First Name"
-            />
-            <label for="Lastname">Last Name</label>
-            <input
-              type="text"
-              name="Lastname"
-              class="input"
-              placeholder="Last Name"
-            />
-            <label for="Age">Age</label>
-            <input type="number" name="Age" class="input" placeholder="Age" />
+        <div class="bg-clr container">
+          <div class="form-container">
+            <form class="form" action="url">
+              <label for="Firstname">First Name</label>
+              <input
+                id="Firstname"
+                type="text"
+                name="Firstname"
+                class="input"
+                placeholder="First Name"
+              />
+              <label for="Lastname">Last Name</label>
+              <input
+                id="Lastname"
+                type="text"
+                name="Lastname"
+                class="input"
+                placeholder="Last Name"
+              />
+              <label for="Age">Age</label>
+              <input
+                id="Age"
+                type="number"
+                name="Age"
+                class="input"
+                max="100"
+                min="0"
+                placeholder="Age"
+              />
 
-            <label for="Height">Height</label>
-            <input
-              type="number"
-              name="Height"
-              class="input"
-              placeholder="Height"
-            />
+              <label for="Height">Height</label>
+              <input
+                id="Height"
+                type="number"
+                name="Height"
+                max="250"
+                min="0"
+                class="input"
+                placeholder="Height"
+              />
 
-            <label for="Weight">Weight</label>
-            <input
-              type="number"
-              name="Weight"
-              class="input"
-              placeholder="Weight"
-            />
-          </form>
+              <label for="Weight">Weight</label>
+              <input
+                id="Weight"
+                type="number"
+                name="Weight"
+                max="200"
+                min="0"
+                class="input"
+                placeholder="Weight"
+              />
+            </form>
+          </div>
+
           <span class="v-line"></span>
+          <div class="hidden" class="results-container">
+            <div class="results"></div>
+          </div>
+          <div class="button-container">
+            <button type="submit" class="hidden Next-page">
+              <a>Next Page</a>
+            </button>
+            <button type="submit" class="submit">Submit</button>
+          </div>
         </div>
       </section>
     </main>
