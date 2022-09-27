@@ -209,3 +209,19 @@ label {
   color: var(--textClr);
   cursor: pointer;
 }
+
+.refresh {
+  position: absolute;
+  padding: 10px;
+  font-size: 1.5rem;
+  background: var(--backgroundClr);
+  color: white;
+  top: 30px;
+  right: 50px;
+  border-radius: 10px/20px;
+  transition: 0.5s ease;
+}
+.refresh:hover {
+  color: var(--textClr);
+  cursor: pointer;
+}

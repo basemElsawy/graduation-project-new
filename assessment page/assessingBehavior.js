@@ -9,6 +9,7 @@ let submitBtn = document.querySelector('.submit');
 let resultsDiv = document.getElementById('results');
 let gender = document.getElementById('Gender');
 let resultsContainer = document.querySelector('.results-container');
+let refreshBtn = document.querySelector('.refresh');
 
 //----------=========== new elements =======----------
 
@@ -54,6 +55,7 @@ submitBtn.addEventListener('click', function () {
     document.getElementById('results-container').classList.remove('hidden');
     document.querySelector('.Next-page').classList.remove('hidden');
     document.querySelector('.submit').classList.add('hidden');
+    refreshBtn.classList.remove('hidden');
   } else if (gender.value === 'female') {
     bmi = weight.value / height.value ** 2;
     bmi = parseFloat(Number(bmi)).toFixed(1);
@@ -80,5 +82,10 @@ submitBtn.addEventListener('click', function () {
     document.getElementById('results-container').classList.remove('hidden');
     document.querySelector('.Next-page').classList.remove('hidden');
     document.querySelector('.submit').classList.add('hidden');
+    refreshBtn.classList.remove('hidden');
   }
+});
+
+refreshBtn.addEventListener('click', () => {
+  location.reload();
 });
