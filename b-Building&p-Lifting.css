@@ -45,6 +45,7 @@ main {
   text-align: center;
   color: white;
   border-radius: 10px;
+  position: relative;
 }
 .content-container img {
   width: 100%;
@@ -59,7 +60,7 @@ main {
   margin-right: 10px;
 }
 
-.content-container button {
+.content-container a {
   margin-bottom: 50px;
   padding: 20px;
   background-color: #1f3c53;
@@ -67,8 +68,11 @@ main {
   border: none;
   font-size: 2rem;
   transition: 0.5s ease;
+  text-decoration: none;
+  transform: translateY(20px);
+  border-radius: 0px 0px 20px 20px;
 }
-.content-container button:hover {
+.content-container a:hover {
   color: #ffae21;
   cursor: pointer;
 }
