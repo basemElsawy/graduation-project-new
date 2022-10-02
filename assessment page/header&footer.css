@@ -60,6 +60,7 @@ footer {
   /* flex-direction: column; */
   justify-content: center;
   position: relative;
+  margin-top: 150px;
 }
 
 .contact-links {

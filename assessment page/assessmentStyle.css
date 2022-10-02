@@ -24,7 +24,7 @@
   justify-content: center;
   color: white;
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   background-size: cover;
   background-position: 0px -200px;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
   background-color: #223341a8;
   color: black;
   display: flex;
-  width: 50%;
+  width: 90%;
   width: max-content;
 
   margin: auto;
