@@ -71,16 +71,16 @@ submitBtn.addEventListener('click', function () {
     bmr = Number(weightCalc) + Number(heightCalc) - Number(ageCalc) - 161;
     bmr = parseFloat(Number(bmr)).toFixed(1);
     if (bmi <= 18.5) {
-      results = `Hello ${firstName.value} ${lastName.value} Your body mass index is ${bmi} and you're slightly underweight`;
+      results = `Hello ${firstName.value} ${lastName.value} Your body mass index is ${bmi} and you're slightly underweight also your basal metabolic rate is ${bmr} keep that in mind cause it'll help alot with the diet plan soon on our website.`;
     }
     if (bmi >= 18.5 && bmi <= 24.9) {
-      results = `Hello ${firstName.value} ${lastName.value} Your body mass index is ${bmi} and your weight is normal`;
+      results = `Hello ${firstName.value} ${lastName.value} Your body mass index is ${bmi} and your weight is normal also your basal metabolic rate is ${bmr} keep that in mind cause it'll help alot with the diet plan soon on our website.`;
     }
     if (bmi >= 25 && bmi <= 29.9) {
-      results = `Hello ${firstName.value} ${lastName.value}  Your body mass index is ${bmi} and you're slightly overweight`;
+      results = `Hello ${firstName.value} ${lastName.value}  Your body mass index is ${bmi} and you're slightly overweight also your basal metabolic rate is ${bmr} keep that in mind cause it'll help alot with the diet plan soon on our website.`;
     }
     if (bmi >= 30) {
-      results = `Hello ${firstName.value} ${lastName.value}  Your body mass index is ${bmi} and you're suffering obesity`;
+      results = `Hello ${firstName.value} ${lastName.value}  Your body mass index is ${bmi} and you're suffering obesity also your basal metabolic rate is ${bmr} keep that in mind cause it'll help alot with the diet plan soon on our website.`;
     }
     document.getElementById('results').append(results);
     document.getElementById('results-container').classList.remove('hidden');
