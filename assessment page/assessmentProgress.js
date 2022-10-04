@@ -1,27 +1,52 @@
 'use strict';
 
-let firstName = document.getElementById('Firstname');
-let lastName = document.getElementById('Lastname');
-let age = document.getElementById('Age');
-let height = document.getElementById('Height');
-let weight = document.getElementById('Weight');
-let submitBtn = document.querySelector('.submit');
-let resultsDiv = document.getElementById('results');
-let gender = document.getElementById('Gender');
-let resultsContainer = document.querySelector('.results-container');
-let refreshBtn = document.querySelector('.refresh');
 let header = document.querySelector('.header');
 let logo = document.querySelector('.logo');
 let navbar = document.querySelector('.navbar');
 let logoImg = document.querySelector('.muscle-img');
-
 let nextPg = document.querySelector('.Next-page');
-//----------=========== new elements =======----------
+let progress = document.getElementById('progress');
+let circles = document.querySelectorAll('.circle');
+let firstFormPg = document.querySelector('.first');
+let secondFormPg = document.querySelector('.second');
+let startWrk = document.querySelector('.Start-work');
+
+let currentActives = 1;
+//----------=========== new elements =======---------
 
 // -------------======== Variables =======---------------
-
 // -------------================= Event LISTENERS ===========--------------
 
+nextPg.addEventListener('click', () => {
+  currentActives++;
+  if (currentActives > circles.length) {
+    currentActives = circles.length;
+  }
+  update();
+});
+//---------------============== update numbers function ===========-------------
+
+function update() {
+  circles.forEach((circle, idx) => {
+    if (idx < currentActives) {
+      circle.classList.add('active');
+    } else {
+      circle.classList.remove('active');
+    }
+  });
+  const actives = document.querySelectorAll('.active');
+  progress.style.width = '100%';
+
+  firstFormPg.style.display = 'none';
+
+  secondFormPg.classList.remove('hidden');
+  secondFormPg.style.width = '500px';
+  nextPg.classList.add('hidden');
+  startWrk.classList.remove('hidden');
+  startWrk.style.transform = 'translateX(22px) translateY(-20px)';
+}
+
+// ------------============= SCROLLING FUNCTIONALITY==========-----------
 document.addEventListener('DOMContentLoaded', () => {
   window.onscroll = function () {
     scrollFunction();

@@ -202,14 +202,22 @@ label {
 
 .Next-page a {
   text-decoration: none;
+  color: white;
+  background-color: #223341;
+  transition: 0.5s ease;
+  opacity: 0.7;
 }
 
 .Next-page:hover {
   opacity: 1;
   color: var(--textClr);
   cursor: pointer;
+  background-color: var(--backgroundClr);
 }
-
+#next-pg:hover {
+  color: var(--textClr);
+  opacity: 1;
+}
 .refresh {
   position: absolute;
   padding: 10px;

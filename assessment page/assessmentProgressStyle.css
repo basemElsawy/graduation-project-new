@@ -150,7 +150,11 @@ label {
   color: var(--textClr);
   cursor: pointer;
 }
-
+.first {
+  display: inline;
+  transition: 0.2s ease;
+  opacity: 1;
+}
 .form-page {
   display: flex;
   flex-direction: column;
@@ -158,6 +162,7 @@ label {
   padding-top: 20px;
   transform: translateY(10px);
   margin: 50px 50px;
+  width: 650px;
   max-height: fit-content;
   height: 250px;
   font-size: 1.1rem;
@@ -187,6 +192,7 @@ label {
 .main-prog-container {
   position: relative;
   height: 10px;
+  transform: translateX(-5px);
 }
 
 .progress-container {
@@ -236,4 +242,40 @@ label {
 }
 .circle.active {
   border: 3px solid #2f4e68;
+}
+
+.Start-work {
+  background-color: var(--backgroundClr);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+  color: white;
+  font-weight: bolder;
+  transition: 0.5s ease;
+  opacity: 0.7;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transform: translateY(-20px);
+}
+
+.Start-work:hover {
+  opacity: 1;
+  color: var(--textClr);
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.form-container {
+  display: flex;
+}
+
+.second {
+  width: 0px;
+  transition: 0.3s ease;
 }
