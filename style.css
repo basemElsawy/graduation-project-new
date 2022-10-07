@@ -360,13 +360,15 @@ body {
   margin-bottom: 100px;
   background-color: #223341;
   color: white;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 100px;
   border-radius: 10px;
   padding: 10px;
 }
 .card {
   border: none;
+  margin-bottom: 100px;
 }
 .card img {
   border-radius: 10px 10px 0px 0px;
@@ -504,4 +506,56 @@ footer {
 .footer-btn a:hover {
   color: #ffae21;
   cursor: pointer;
+}
+
+.content-container {
+  display: flex;
+  background-color: #1f3c53;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 98%;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  color: white;
+  height: 700px;
+  position: relative;
+  margin-bottom: 200px;
+  border-radius: 10px;
+}
+.content-container img {
+  width: 100%;
+  border-radius: 10px 10px;
+  padding-bottom: 50px;
+}
+
+.content-container p {
+  font: 'Work Sans';
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.content-container a {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #1f3c53;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  transition: 0.5s ease;
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 0px #1f3c53;
+  border-radius: 0px 0px 20px 20px;
+}
+.content-container a:hover {
+  color: #ffae21;
+  cursor: pointer;
+  box-shadow: 0px 25px 35px 0px #1f3b5372;
+}
+.content-container a:active {
+  transform: scale(0.98);
+}
+.para-start {
+  padding: 10px;
 }

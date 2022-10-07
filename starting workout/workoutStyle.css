@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+:root {
+  --background-clr: #223341;
+  --text-Clr: #ffae21;
+}
+
+main {
+  height: 1200px;
+}
+
+/* ---------------============ styling the first picture ==========---------- */
+.first-img {
+  margin-top: 5px;
+}
+.heading-img {
+  position: relative;
+}
+
+.figure-img {
+  position: relative;
+  height: 600px;
+  max-height: fit-content;
+}
+
+.bg-clr {
+  background-color: var(--background-clr);
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+.first-heading {
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  bottom: 30px;
+}
+
+.first-heading span {
+  font-size: 1.5rem;
+}
+.first-heading h1 > span {
+  font-size: 3rem;
+}
+.first-heading h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
