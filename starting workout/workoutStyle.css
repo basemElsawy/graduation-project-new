@@ -57,3 +57,35 @@ main {
   font-size: 3rem;
   margin-bottom: 10px;
 }
+
+.button-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #223341;
+}
+.guide-btn {
+  margin-right: 10px;
+  margin-left: 40px;
+  font-size: 1.2rem;
+  border: none;
+  padding: 1rem;
+  background-color: #223341;
+  color: white;
+  border-radius: 50px;
+}
+
+.guide-btn:hover {
+  cursor: pointer;
+  background-color: #324b5f;
+}
+
+.guide-btn:active {
+  transform: scale(0.98);
+}
+
+.guide-btn:focus {
+  background-color: #324b5f;
+}
