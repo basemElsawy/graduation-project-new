@@ -559,3 +559,26 @@ footer {
 .para-start {
   padding: 10px;
 }
+
+.Weightlifting-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 300px; */
+}
+.article-lifting {
+  text-align: justify;
+  margin-right: 100px;
+}
+.section-image {
+  position: relative;
+}
+.section-image img {
+  border-radius: 10px 0px 0px 10px;
+}
+.image-header {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1.5rem;
+  left: 65%;
+}
