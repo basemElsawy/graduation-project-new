@@ -1,9 +1,24 @@
+'use strict';
+
 let header = document.querySelector('.header');
 let logo = document.querySelector('.logo');
 let navbar = document.querySelector('.navbar');
 let logoImg = document.querySelector('.muscle-img');
+let guideBtns = document.querySelectorAll('.guide-btn');
+let sections = document.querySelectorAll('.section');
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+
+//--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
+
+guideBtns.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    sections[idx].classList.toggle('hidden');
+  });
+});
+
+//-------------------========== SCROLLING FUNCTIONALITY ===========-----------
+
 document.addEventListener('DOMContentLoaded', function (event) {
   window.onscroll = function () {
     scrollFunction();

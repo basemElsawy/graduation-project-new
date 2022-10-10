@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  height: 2000px;
+  height: auto;
 }
 
 /* ---------------============ styling the first picture ==========---------- */
@@ -147,15 +147,16 @@ main {
 .client-details {
   background-color: var(--background-clr);
   padding: 20px;
-  height: 450px;
+  height: 600px;
   width: fit-content;
   max-width: 90%;
   margin: auto;
   border-radius: 10px;
+  position: relative;
 }
 .bg-clr {
   background-color: white;
-  height: 400px;
+  height: 550px;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -180,6 +181,7 @@ main {
   text-decoration: none;
   font-family: 'Roboto';
   font-weight: 400;
+  transition: 0.3s ease;
 }
 
 .re-assess:hover {
@@ -196,6 +198,7 @@ main {
   background-color: var(--background-clr);
   color: white;
   border-radius: 5px;
+  transition: 0.3s ease;
 }
 .user-img div {
   display: flex;
@@ -205,4 +208,61 @@ main {
 .default-user {
   border-radius: 50%;
   border: 5px solid var(--background-clr);
+}
+.print-form {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  padding: 10px;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #223341;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.edit-change:hover,
+.print-form:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
+}
+
+.table-head th {
+  border: 3px solid rgb(0, 0, 0);
+}
+.table-head td {
+  border: 3px solid rgb(0, 0, 0);
+}
+.table-body td {
+  border: 3px solid rgb(0, 0, 0);
+}
+.table-body th {
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.workout-chart {
+  text-align: center;
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  color: black;
+
+  padding: 50px;
+}
+.workout-schedule {
+  background-color: var(--background-clr);
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.table-container {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
 }
