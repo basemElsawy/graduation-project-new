@@ -13,7 +13,10 @@ let sections = document.querySelectorAll('.section');
 
 guideBtns.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    sections[idx].classList.toggle('hidden');
+    sections[idx].classList.remove('hidden');
+    sections[idx + 1].classList.add('hidden');
+    sections[idx - 1].classList.add('hidden');
+    sections[idx - 2].classList.add('hidden');
   });
 });
 
