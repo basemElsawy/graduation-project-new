@@ -7,16 +7,20 @@ let logoImg = document.querySelector('.muscle-img');
 let guideBtns = document.querySelectorAll('.guide-btn');
 let sections = document.querySelectorAll('.section');
 
+const currentLocation = Array.location;
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
 //--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
 
 guideBtns.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    sections[idx].classList.remove('hidden');
-    sections[idx + 1].classList.add('hidden');
-    sections[idx - 1].classList.add('hidden');
-    sections[idx - 2].classList.add('hidden');
+    let activeSection = document.querySelector('.active');
+    activeSection.classList.remove('active');
+    sections[idx].classList.add('active');
+
+    let activeBtn = document.querySelector('.clicked');
+    activeBtn.classList.remove('clicked');
+    guideBtns[idx].classList.add('clicked');
   });
 });
 
