@@ -582,3 +582,20 @@ footer {
   font-size: 1.5rem;
   left: 65%;
 }
+
+::-webkit-scrollbar {
+  width: 1em;
+  /* height: 500px; */
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 2px 2px 5px var(--background-clr);
+  border-radius: 10px;
+  margin-block: 100px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--background-clr);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #32495d;
+}
