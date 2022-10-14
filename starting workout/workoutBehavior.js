@@ -6,10 +6,28 @@ let navbar = document.querySelector('.navbar');
 let logoImg = document.querySelector('.muscle-img');
 let guideBtns = document.querySelectorAll('.guide-btn');
 let sections = document.querySelectorAll('.section');
-
+//--------========== collapse container variables======-----------
+let moreInfo = document.querySelectorAll('.more-info');
+let collapseMenu = document.querySelectorAll('.collapse-container');
+let insideCollapse = document.querySelectorAll('.inside-collapse');
+let closeArrow = document.querySelectorAll('.close-btn');
 const currentLocation = Array.location;
-// -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
+// -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+moreInfo.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    collapseMenu[idx].style.transform = 'translateY(0px)';
+    insideCollapse[idx].style.display = 'block';
+  });
+});
+
+closeArrow.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    collapseMenu[idx].style.transform = 'translateY(-100px)';
+    insideCollapse[idx].style.display = 'none';
+    console.log('button clicked');
+  });
+});
 //--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
 
 guideBtns.forEach((btn, idx) => {
