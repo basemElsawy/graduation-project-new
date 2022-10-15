@@ -321,6 +321,7 @@ main {
   /* margin-bottom: 300px; */
   position: relative;
   z-index: 2;
+  margin-top: 75px;
 }
 
 .exercise-detail {
@@ -339,7 +340,7 @@ main {
   padding-bottom: 20px;
 }
 .img {
-  border-radius: 50px;
+  width: 80%;
 }
 .exercise-img button {
   padding: 10px;
@@ -410,7 +411,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   transition: 1s ease;
   position: relative;
   transform: translateY(-100px);
@@ -491,7 +492,7 @@ hr {
   align-items: center;
   width: 500px;
   text-align: right;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   font-weight: bold;
 }
 .detail-header {
@@ -499,14 +500,14 @@ hr {
   margin-bottom: 10px;
 }
 
-.v-row {
+/* .v-row {
   height: 150px;
   transform: translateY(1px) translateX(10px);
   width: 4px;
   border-radius: 10px;
   opacity: 0.5;
   background-color: var(--background-clr);
-}
+} */
 
 .header-sep {
   width: 20%;

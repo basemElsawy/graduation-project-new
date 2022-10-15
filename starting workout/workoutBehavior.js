@@ -11,13 +11,32 @@ let moreInfo = document.querySelectorAll('.more-info');
 let collapseMenu = document.querySelectorAll('.collapse-container');
 let insideCollapse = document.querySelectorAll('.inside-collapse');
 let closeArrow = document.querySelectorAll('.close-btn');
+let lrnMore = document.querySelectorAll('.learn-more');
+let closeLrnMore = document.querySelectorAll('.close-categorie');
+let collapseCategorie = document.querySelectorAll('.categorie-collapse');
+let collapseInsideCat = document.querySelectorAll('.categorie-inside');
+
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+lrnMore.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    collapseCategorie[idx].style.transform = 'translateY(0px)';
+    collapseInsideCat[idx].style.display = 'block';
+  });
+});
+closeLrnMore.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    collapseCategorie[idx].style.transform = 'translateY(-100px)';
+    collapseInsideCat[idx].style.display = 'none';
+  });
+});
+
 moreInfo.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     collapseMenu[idx].style.transform = 'translateY(0px)';
     insideCollapse[idx].style.display = 'block';
+    collapseMenu[idx].style.marginBottom = '30px';
   });
 });
 
@@ -25,6 +44,7 @@ closeArrow.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     collapseMenu[idx].style.transform = 'translateY(-100px)';
     insideCollapse[idx].style.display = 'none';
+    collapseMenu[idx].style.marginBottom = '30px';
   });
 });
 //--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
