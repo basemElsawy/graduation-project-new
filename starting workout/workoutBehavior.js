@@ -23,9 +23,8 @@ moreInfo.forEach((btn, idx) => {
 
 closeArrow.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    collapseMenu[idx].style.transform = 'translateY(-100px)';
+    collapseMenu[idx].style.transform = 'translateY(-200px)';
     insideCollapse[idx].style.display = 'none';
-    console.log('button clicked');
   });
 });
 //--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
