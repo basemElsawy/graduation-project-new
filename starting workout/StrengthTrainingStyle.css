@@ -1,0 +1,19 @@
+:root {
+  --background-clr: #223341;
+  --text-Clr: #ffae21;
+}
+
+.core-exercises {
+  background-color: var(--background-clr);
+  width: 70%;
+  margin: auto;
+  height: 300px;
+}
+
+.guide {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
