@@ -26,6 +26,7 @@ main {
 ::-webkit-scrollbar-track {
   box-shadow: inset 2px 2px 5px var(--background-clr);
   border-radius: 10px;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--background-clr);
