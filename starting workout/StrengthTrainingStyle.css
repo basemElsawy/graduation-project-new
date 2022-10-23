@@ -2,7 +2,6 @@
   --background-clr: #223341;
   --text-Clr: #ffae21;
 }
-
 .exercise-categorie {
   background-color: var(--background-clr);
   width: 75%;
@@ -102,4 +101,112 @@
 .close-categorie:hover {
   cursor: pointer;
   color: #ffae21;
+}
+
+.must-do-exercises {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  z-index: 100;
+}
+
+.must-do {
+  background-color: var(--background-clr);
+  border-radius: 10px;
+  color: white;
+  height: 270px;
+}
+
+.topic {
+  /* margin- margin-left: 10px;block: 5px; */
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.describe {
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.muscles-selector {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-clr);
+
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.more-exercises {
+  background-color: var(--background-clr);
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 00.3s ease;
+  z-index: 10;
+}
+
+.more-exercises:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
+}
+.first-muscle {
+  background-color: var(--background-clr);
+  color: black;
+}
+
+.muscles > img {
+  border-radius: 10px 10px 0px 0px;
+}
+.head {
+  color: black;
+}
+.not-selected {
+  display: none;
+}
+.selected {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 850px;
+}
+
+.selected img {
+  width: 100%;
+}
+.muscles-first {
+  color: white;
+  background-color: var(--background-clr);
+  /* border-radius: 10px 10px 0px 0px; */
+  width: 100%;
+}
+.exercise-details {
+  color: black;
+}
+.backg-color {
+  background-color: white;
+}
+.muscles {
+  border: 10px solid var(--background-clr);
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  z-index: 100;
+}
+.turn-off {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: var(--background-clr);
+  border: none;
+  padding: 10px;
+  color: white;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.turn-off:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
 }
