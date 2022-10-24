@@ -16,9 +16,32 @@ let closeLrnMore = document.querySelectorAll('.close-categorie');
 let collapseCategorie = document.querySelectorAll('.categorie-collapse');
 let collapseInsideCat = document.querySelectorAll('.categorie-inside');
 
+let moreExercsies = document.querySelectorAll('.more-exercises');
+let closePanel = document.querySelectorAll('.turn-off');
+let musclesPanel = document.querySelectorAll('.muscles');
+let musclesContainer = document.querySelectorAll('.muscles-containing');
+let mustDoExercises = document.querySelectorAll('.must-do');
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+
+closePanel.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    musclesPanel[idx].style.height = '0px';
+    musclesContainer[idx].style.height = '0px';
+    musclesContainer[idx].style.transform = 'translateY(-50px)';
+    musclesPanel[idx].style.visibitliy = 'hidden';
+    musclesPanel[idx].style.transform = 'translateY(-2300px)';
+    setTimeout(() => {
+      musclesPanel[idx].style.display = 'none';
+      // musclesContainer[idx].style.display = 'none';
+    }, 1000);
+
+    document.querySelector('.selected').classList.remove('selected');
+    document.querySelector('.not-selected').classList.remove('not-selected');
+  });
+});
+
 lrnMore.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     collapseCategorie[idx].style.transform = 'translateY(0px)';

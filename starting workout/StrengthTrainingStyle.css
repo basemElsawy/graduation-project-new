@@ -115,6 +115,13 @@
   border-radius: 10px;
   color: white;
   height: 270px;
+  margin-bottom: 100px;
+  width: 400px;
+  transition: 0.2s ease;
+  position: relative;
+}
+.must-do > img {
+  width: 100%;
 }
 
 .topic {
@@ -153,8 +160,7 @@
   color: var(--text-Clr);
   cursor: pointer;
 }
-.first-muscle {
-  background-color: var(--background-clr);
+.muscles-first {
   color: black;
 }
 
@@ -165,20 +171,20 @@
   color: black;
 }
 .not-selected {
-  display: none;
+  /* display: none; */
 }
-.selected {
+/* .selected {
   width: 90%;
   text-align: center;
   margin-bottom: 850px;
-}
+} */
 
 .selected img {
   width: 100%;
 }
 .muscles-first {
-  color: white;
-  background-color: var(--background-clr);
+  color: black;
+  /* background-color: var(--background-clr); */
   /* border-radius: 10px 10px 0px 0px; */
   width: 100%;
 }
@@ -189,11 +195,16 @@
   background-color: white;
 }
 .muscles {
+  display: none;
   border: 10px solid var(--background-clr);
-  width: 75%;
+  width: 100%;
   margin: auto;
   border-radius: 10px;
+  height: 0px;
   z-index: 100;
+  transition: 1s ease-in-out;
+  background-color: white;
+  visibility: visible;
 }
 .turn-off {
   font-size: 1.5rem;
@@ -209,4 +220,20 @@
 .turn-off:hover {
   color: var(--text-Clr);
   cursor: pointer;
+}
+
+.muscles-containing {
+  transition: 1s ease-in-out;
+  height: 0px;
+  border: 10px solid var(--background-clr);
+  background-color: #223341;
+  z-index: -100;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  transform: translateY(-50px);
+}
+
+.must-do:hover {
+  transform: scale(1.05);
 }
