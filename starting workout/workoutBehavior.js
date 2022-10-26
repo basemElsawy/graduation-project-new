@@ -31,14 +31,18 @@ moreExercsiesBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     mustDoExercises[idx].classList.add('selected');
     mustDoExercises[idx].classList.remove('not-selected');
-    images[idx].style.width = '75%';
-    images[idx].style.marginLeft = '15%';
+    images[idx].style.width = '60%';
+    images[idx].style.height = '300px';
+    images[idx].style.marginLeft = '20%';
+    images[idx].style.border = '10px solid #2d4a62a9';
     images[idx].style.borderRadius = '20px';
     musclesPanel[idx].style.height = '800px';
     musclesPanel[idx].style.visibitliy = 'visible';
     musclesPanel[idx].style.transform = 'translateY(0px)';
+    musclesPanel[idx].style.margin = 'auto';
     musclesContainer[idx].style.height = '850px';
     musclesContainer[idx].style.transform = 'translateY(0px)';
+    musclesContainer[idx].style.margin = 'auto';
     setTimeout(() => {
       musclesPanel[idx].style.display = 'block';
     }, 200);
@@ -58,6 +62,8 @@ closePanel.forEach((btn, idx) => {
     musclesContainer[idx].style.transform = 'translateY(-50px)';
     musclesPanel[idx].style.visibitliy = 'hidden';
     musclesPanel[idx].style.transform = 'translateY(-2300px)';
+    images[idx].style.height = '200px';
+
     setTimeout(() => {
       musclesPanel[idx].style.display = 'none';
       // musclesContainer[idx].style.display = 'none';
@@ -65,6 +71,7 @@ closePanel.forEach((btn, idx) => {
     images[idx].style.borderRadius = '0px';
     images[idx].style.width = '100%';
     images[idx].style.marginLeft = '0%';
+    images[idx].style.border = 'none';
 
     document.querySelector('.selected').classList.add('not-selected');
     document.querySelector('.selected').classList.remove('selected');

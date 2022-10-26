@@ -174,7 +174,7 @@
   /* display: none; */
 }
 .selected {
-  width: 80%;
+  width: 75%;
   text-align: center;
   margin-bottom: 1000px;
   border-radius: 30px;
@@ -184,8 +184,9 @@
   transition: 0.3s ease;
 }
 
-.selected img {
-  width: 100%;
+.selected > img {
+  color: #2d4a62a9;
+  width: 50%;
 }
 .muscles-first {
   color: black;
@@ -245,4 +246,12 @@
 
 .selected:hover {
   transform: scale(1);
+}
+
+.exercise-inform {
+  padding: 20px;
+}
+
+.head {
+  padding: 20px;
 }
