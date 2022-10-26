@@ -152,7 +152,7 @@
   color: white;
   padding: 10px;
   border-radius: 10px;
-  transition: 00.3s ease;
+  transition: 0.3s ease;
   z-index: 10;
 }
 
@@ -173,11 +173,16 @@
 .not-selected {
   /* display: none; */
 }
-/* .selected {
-  width: 90%;
+.selected {
+  width: 80%;
   text-align: center;
-  margin-bottom: 850px;
-} */
+  margin-bottom: 1000px;
+  border-radius: 30px;
+}
+
+.image-select {
+  transition: 0.3s ease;
+}
 
 .selected img {
   width: 100%;
@@ -202,7 +207,7 @@
   border-radius: 10px;
   height: 0px;
   z-index: 100;
-  transition: 1s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: white;
   visibility: visible;
 }
@@ -223,7 +228,7 @@
 }
 
 .muscles-containing {
-  transition: 1s ease-in-out;
+  transition: 0.3s ease-in-out;
   height: 0px;
   border: 10px solid var(--background-clr);
   background-color: #223341;
@@ -236,4 +241,8 @@
 
 .must-do:hover {
   transform: scale(1.05);
+}
+
+.selected:hover {
+  transform: scale(1);
 }

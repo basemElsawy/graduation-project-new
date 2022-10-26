@@ -16,14 +16,40 @@ let closeLrnMore = document.querySelectorAll('.close-categorie');
 let collapseCategorie = document.querySelectorAll('.categorie-collapse');
 let collapseInsideCat = document.querySelectorAll('.categorie-inside');
 
-let moreExercsies = document.querySelectorAll('.more-exercises');
+let moreExercsiesBtn = document.querySelectorAll('.more-exercises');
 let closePanel = document.querySelectorAll('.turn-off');
 let musclesPanel = document.querySelectorAll('.muscles');
 let musclesContainer = document.querySelectorAll('.muscles-containing');
 let mustDoExercises = document.querySelectorAll('.must-do');
+let images = document.querySelectorAll('.image-select');
+
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+
+moreExercsiesBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    mustDoExercises[idx].classList.add('selected');
+    mustDoExercises[idx].classList.remove('not-selected');
+    images[idx].style.width = '75%';
+    images[idx].style.marginLeft = '15%';
+    images[idx].style.borderRadius = '20px';
+    musclesPanel[idx].style.height = '800px';
+    musclesPanel[idx].style.visibitliy = 'visible';
+    musclesPanel[idx].style.transform = 'translateY(0px)';
+    musclesContainer[idx].style.height = '850px';
+    musclesContainer[idx].style.transform = 'translateY(0px)';
+    setTimeout(() => {
+      musclesPanel[idx].style.display = 'block';
+    }, 200);
+
+    let notSelected = document.querySelectorAll('.not-selected');
+
+    for (let i in notSelected) {
+      notSelected[i].style.display = 'none';
+    }
+  });
+});
 
 closePanel.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
@@ -36,9 +62,18 @@ closePanel.forEach((btn, idx) => {
       musclesPanel[idx].style.display = 'none';
       // musclesContainer[idx].style.display = 'none';
     }, 1000);
+    images[idx].style.borderRadius = '0px';
+    images[idx].style.width = '100%';
+    images[idx].style.marginLeft = '0%';
 
+    document.querySelector('.selected').classList.add('not-selected');
     document.querySelector('.selected').classList.remove('selected');
-    document.querySelector('.not-selected').classList.remove('not-selected');
+
+    let notSelected = document.querySelectorAll('.not-selected');
+
+    for (let i in notSelected) {
+      notSelected[i].style.display = 'inline';
+    }
   });
 });
 
