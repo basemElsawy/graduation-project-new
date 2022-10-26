@@ -256,7 +256,8 @@
   padding: 20px;
 }
 
-.add-schedule {
+.add-schedule,
+.add-schedule-main {
   font-size: 1.1rem;
   border: none;
   background-color: #223341;
@@ -267,10 +268,12 @@
   transition: 0.1s ease;
 }
 
-.add-schedule:hover {
+.add-schedule:hover,
+.add-schedule-main:hover {
   color: var(--text-Clr);
   cursor: pointer;
 }
-.add-schedule:active {
+.add-schedule:active,
+.add-schedule-main:active {
   transform: scale(0.98);
 }

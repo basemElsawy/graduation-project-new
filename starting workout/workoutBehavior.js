@@ -23,6 +23,11 @@ let musclesContainer = document.querySelectorAll('.muscles-containing');
 let mustDoExercises = document.querySelectorAll('.must-do');
 let images = document.querySelectorAll('.image-select');
 
+let addWrkoutScheduleBtn = document.querySelectorAll('.add-schedule');
+let addMainLftBtn = document.querySelectorAll('.add-schedule-main');
+let chosenExerciseTitle = document.querySelectorAll('.chosen-exercise');
+let chosenMainLftTitle = document.querySelectorAll('.chosen-main-exercise');
+
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
