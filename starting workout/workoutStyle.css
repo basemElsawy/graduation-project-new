@@ -275,12 +275,16 @@ main {
 
 .workout-chart {
   text-align: center;
-  width: 90%;
-  max-width: 90%;
+  width: 80%;
+  max-width: 80%;
   margin: auto;
   color: black;
-
+  height: fit-content;
+  max-height: 75%;
+  /* display: none;
+  visibility: hidden; */
   padding: 50px;
+  transition: 0.5s ease;
 }
 .workout-schedule {
   background-color: var(--background-clr);
@@ -289,6 +293,7 @@ main {
   margin: auto;
   padding: 20px;
   border-radius: 10px;
+  height: 600px;
 }
 .table-container {
   background-color: white;

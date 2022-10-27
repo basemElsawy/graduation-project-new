@@ -277,3 +277,91 @@
 .add-schedule-main:active {
   transform: scale(0.98);
 }
+
+.workout-schedule {
+  position: relative;
+}
+
+.schedule-choice {
+  position: absolute;
+  top: 70px;
+  left: 510px;
+  background-color: white;
+  border: 5px solid var(--background-clr);
+  width: 400px;
+  height: 300px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.schedule-choice h3 {
+  margin: 15px;
+  background-color: var(--background-clr);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+.schedule-choice span {
+  margin-bottom: 15px;
+}
+.btn-schedule-choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn-schedule-choose {
+  padding: 10px;
+  background-color: var(--background-clr);
+}
+
+.choose-schedule-btn {
+  background-color: var(--background-clr);
+  color: white;
+  text-align: center;
+  border: none;
+  font-weight: bolder;
+  transition: 0.3s ease;
+}
+.choose-schedule-btn:hover {
+  color: var(--text-Clr);
+}
+.welcome-container {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: none;
+}
+
+.welcome-container span {
+  font-size: 1.2rem;
+  font-size: bold;
+}
+.welcome-container h2 {
+}
+#orange {
+  font-size: 1.5rem;
+}
+.organize-week-btn {
+  background-color: var(--background-clr);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  width: 50%;
+}
+
+.organize-week-btn:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
+}
