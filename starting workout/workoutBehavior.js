@@ -28,10 +28,55 @@ let addMainLftBtn = document.querySelectorAll('.add-schedule-main');
 let chosenExerciseTitle = document.querySelectorAll('.chosen-exercise');
 let chosenMainLftTitle = document.querySelectorAll('.chosen-main-exercise');
 
+let tableContainer = document.querySelectorAll('.table-container');
+let chooseScheduleBtn = document.querySelectorAll('.choose-schedule-btn');
+let workoutSchedule = document.querySelector('.workout-schedule');
+let organizeWeekBtn = document.querySelector('.organize-week-btn');
+let scheduleChoice = document.querySelector('.schedule-choice');
+let welcomeContainer = document.querySelector('.welcome-container');
+let chooseAgainBtn = document.querySelector('.choose-again');
+let notChosenTable = document.querySelectorAll('.not-chosen');
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
+chooseAgainBtn.addEventListener('click', () => {
+  document.querySelector('.chosen').classList.add('not-chosen');
+  document.querySelector('.chosen').classList.remove('chosen');
+  workoutSchedule.style.height = '600px';
+  welcomeContainer.style.display = 'flex';
+  chooseAgainBtn.style.display = 'none';
+  setTimeout(() => {
+    welcomeContainer.style.opacity = '1';
+  }, 350);
+});
+
+chooseScheduleBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    tableContainer[idx].classList.remove('not-chosen');
+    tableContainer[idx].classList.add('chosen');
+    workoutSchedule.style.height = 'auto';
+    scheduleChoice.style.opacity = '0';
+    chooseAgainBtn.style.display = 'inline';
+
+    setTimeout(() => {
+      scheduleChoice.style.display = 'none';
+    }, 350);
+  });
+});
+
+// ------------------================= TABLE FUNCTUONALITY ====================---------------
+
+organizeWeekBtn.addEventListener('click', () => {
+  scheduleChoice.style.display = 'flex';
+  welcomeContainer.style.opacity = '0';
+  setTimeout(() => {
+    scheduleChoice.style.opacity = '1';
+    welcomeContainer.style.display = 'none';
+  }, 350);
+});
+
+// ----------------================== MUSCLE PANEL FUNCTIONALITY ================--------------------------
 moreExercsiesBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
     mustDoExercises[idx].classList.add('selected');
@@ -88,6 +133,8 @@ closePanel.forEach((btn, idx) => {
     }
   });
 });
+
+// --------------==================== COLLAPSE MENU FOR EACH MOVEMENT ============----------------
 
 lrnMore.forEach((btn, idx) => {
   btn.addEventListener('click', () => {

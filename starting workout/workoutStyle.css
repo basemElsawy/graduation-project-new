@@ -262,15 +262,19 @@ main {
 
 .table-head th {
   border: 3px solid rgb(0, 0, 0);
+  gap: 0;
 }
 .table-head td {
   border: 3px solid rgb(0, 0, 0);
+  gap: 0;
 }
 .table-body td {
   border: 3px solid rgb(0, 0, 0);
+  gap: 0;
 }
 .table-body th {
   border: 3px solid rgb(0, 0, 0);
+  gap: 0;
 }
 
 .workout-chart {
@@ -279,8 +283,8 @@ main {
   max-width: 80%;
   margin: auto;
   color: black;
-  height: fit-content;
-  max-height: 75%;
+  height: 800px;
+  max-height: auto;
   /* display: none;
   visibility: hidden; */
   padding: 50px;
@@ -293,9 +297,10 @@ main {
   margin: auto;
   padding: 20px;
   border-radius: 10px;
-  height: 600px;
+  height: 550px;
+  max-height: auto;
 }
-.table-container {
+.table-container-all {
   background-color: white;
   border-radius: 5px;
   width: 100%;
@@ -518,4 +523,24 @@ hr {
 .header-sep {
   width: 20%;
   margin-bottom: 20px;
+}
+
+.choose-again {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  background-color: var(--background-clr);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.choose-again:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
 }
