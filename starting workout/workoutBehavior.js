@@ -1,5 +1,5 @@
 'use strict';
-
+// -------------------================= HEADER VARIABLES ==================------------------
 let header = document.querySelector('.header');
 let logo = document.querySelector('.logo');
 let navbar = document.querySelector('.navbar');
@@ -15,19 +15,19 @@ let lrnMore = document.querySelectorAll('.learn-more');
 let closeLrnMore = document.querySelectorAll('.close-categorie');
 let collapseCategorie = document.querySelectorAll('.categorie-collapse');
 let collapseInsideCat = document.querySelectorAll('.categorie-inside');
-
+// --------------------===================== EXERCISES PANEL VARIABLES ================--------------------
 let moreExercsiesBtn = document.querySelectorAll('.more-exercises');
 let closePanel = document.querySelectorAll('.turn-off');
 let musclesPanel = document.querySelectorAll('.muscles');
 let musclesContainer = document.querySelectorAll('.muscles-containing');
 let mustDoExercises = document.querySelectorAll('.must-do');
 let images = document.querySelectorAll('.image-select');
-
+// ---------------======================= ADD TO TABLE VARIABLES ==========------------
 let addWrkoutScheduleBtn = document.querySelectorAll('.add-schedule');
 let addMainLftBtn = document.querySelectorAll('.add-schedule-main');
 let chosenExerciseTitle = document.querySelectorAll('.chosen-exercise');
 let chosenMainLftTitle = document.querySelectorAll('.chosen-main-exercise');
-
+// -----------------============= WORKOUT TABLE VARIABLES
 let tableContainer = document.querySelectorAll('.table-container');
 let chooseScheduleBtn = document.querySelectorAll('.choose-schedule-btn');
 let workoutSchedule = document.querySelector('.workout-schedule');
@@ -36,10 +36,21 @@ let scheduleChoice = document.querySelector('.schedule-choice');
 let welcomeContainer = document.querySelector('.welcome-container');
 let chooseAgainBtn = document.querySelector('.choose-again');
 let notChosenTable = document.querySelectorAll('.not-chosen');
+let chosenTable = document.querySelector('.chosen');
+let tbodyEl = document.querySelectorAll('tbody');
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
+// ----------------============= WORKOUTS FUNCTIONALITY ================-------------------
+
+addWrkoutScheduleBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    console.log(document.querySelector('#day1-second-table').innerHTML);
+  });
+});
+
+// ------------------================= TABLE FUNCTUONALITY ====================---------------
 chooseAgainBtn.addEventListener('click', () => {
   document.querySelector('.chosen').classList.add('not-chosen');
   document.querySelector('.chosen').classList.remove('chosen');
@@ -51,21 +62,33 @@ chooseAgainBtn.addEventListener('click', () => {
   }, 350);
 });
 
-chooseScheduleBtn.forEach((btn, idx) => {
+chooseScheduleBtn.forEach((btn, idx, e) => {
   btn.addEventListener('click', () => {
     tableContainer[idx].classList.remove('not-chosen');
     tableContainer[idx].classList.add('chosen');
     workoutSchedule.style.height = 'auto';
     scheduleChoice.style.opacity = '0';
     chooseAgainBtn.style.display = 'inline';
+    storingTable(idx);
 
     setTimeout(() => {
       scheduleChoice.style.display = 'none';
     }, 350);
   });
 });
-
-// ------------------================= TABLE FUNCTUONALITY ====================---------------
+function storingTable(idx) {
+  if (tableContainer[idx].classList.contains('chosen') === true) {
+    let chosenSchedule = document.querySelector('.chosen');
+    localStorage.setItem(
+      'chosenTable',
+      JSON.stringify(chosenSchedule.innerHTML)
+    );
+  }
+}
+let table = JSON.parse(localStorage.getItem('chosenTable'));
+document.addEventListener('DOMContentLoaded', () => {
+  table;
+});
 
 organizeWeekBtn.addEventListener('click', () => {
   scheduleChoice.style.display = 'flex';
@@ -79,18 +102,18 @@ organizeWeekBtn.addEventListener('click', () => {
 // ----------------================== MUSCLE PANEL FUNCTIONALITY ================--------------------------
 moreExercsiesBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    mustDoExercises[idx].classList.add('selected');
     mustDoExercises[idx].classList.remove('not-selected');
+    mustDoExercises[idx].classList.add('selected');
     images[idx].style.width = '60%';
     images[idx].style.height = '300px';
     images[idx].style.marginLeft = '20%';
     images[idx].style.border = '10px solid #2d4a62a9';
     images[idx].style.borderRadius = '20px';
-    musclesPanel[idx].style.height = '850px';
+    musclesPanel[idx].style.height = 'auto';
     musclesPanel[idx].style.visibitliy = 'visible';
     musclesPanel[idx].style.transform = 'translateY(0px)';
     musclesPanel[idx].style.margin = 'auto';
-    musclesContainer[idx].style.height = '900px';
+    musclesContainer[idx].style.height = 'auto';
     musclesContainer[idx].style.transform = 'translateY(0px)';
     musclesContainer[idx].style.margin = 'auto';
     setTimeout(() => {
