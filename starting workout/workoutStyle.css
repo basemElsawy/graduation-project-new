@@ -308,10 +308,10 @@ main {
 .clicked {
   background-color: #324b5f;
 }
+
 .hidden {
   display: none;
 }
-
 .active {
   display: flex;
 }

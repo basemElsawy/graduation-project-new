@@ -21,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #223341;
 }
 .image {
   background-image: url(pictures/muscle.png);
@@ -72,7 +73,7 @@ a {
 }
 
 .Welcome {
-  opacity: 1;
+  opacity: 0;
   transition: 0.5s ease-in;
   font-size: 3rem;
 }

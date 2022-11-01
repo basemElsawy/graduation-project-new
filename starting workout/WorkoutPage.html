@@ -7,6 +7,8 @@
     <title>Workout Area</title>
     <link href="workoutStyle.css" rel="stylesheet" />
     <link rel="stylesheet" href="header&footer.css" />
+    <link rel="stylesheet" href="workoutpg.css" />
+    <script src="workoutFrstPg.js" defer></script>
     <script
       src="https://kit.fontawesome.com/7031694be7.js"
       crossorigin="anonymous"
@@ -50,137 +52,58 @@
       </section>
       <section class="button-section">
         <div class="button-container">
-          <button class="guide-btn clicked ">
+          <button class="guide-btn clicked">
             Workout-<span class="Orange-txt">area</span>
           </button>
           <button class="guide-btn">Detailed Programs</button>
           <button class="guide-btn">Client Details</button>
         </div>
       </section>
-     
-      
-      
-      <section class="workout-section section hidden active">
-       <div class="sport-choice-container">
-        <div class="sport-choice">
-          <img
-            src="pictures/powerlifting.jpg"
-            alt="Power"
-            width="100%"
-            height="300px"
-          /><span>Strength Training open library</span
-          ><button class="sport-btn"><a href="Strength training.html">Start Learning</a></button>
-        </div>
-        <div class="sport-choice">
-          <img
-            src="pictures/weightlifting.jpg"
-            alt="lifting"
-            width="100%"
-            height="300px"
-          /><span>Weightlifting open library</span
-          ><button class="sport-btn"><a href="weightlifting.html">Start Learning</a></button>
-        </div>
-        <div class="sport-choice">
-          <img
-            src="pictures/bodybuilding.webp"
-            alt="building"
-            width="100%"
-            height="300px"
-          /><span>BodyBuilding open library</span
-          ><button class="sport-btn"><a href="BodyBuilding.html">Start Learning</a></button>
-        </div>
-      </div>
 
-      <section class="workout-schedule section hidden">
-        <div class="table-container">
-        <table class="workout-chart">
-        </thead>
-          <tr class="table-head">
-            <td>Exercise</td>
-            <th >Reps</th>
-            <th>Precentages</th>
-            <th>Comment and instructions</th>
-          </tr>
-         <thead>
-          <tbody>
-            <tr class="table-body">
-              <td>workout 1</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 2</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 3</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 4</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 5</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 6</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 7</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 8</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 9</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-            <tr class="table-body">
-              <td>workout 10</td>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th colspan="4">make sure you do the workouts as written Good luck </th>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+      <section class="workout-section section hidden active">
+        <div class="sport-choice-container">
+          <div class="sport-choice">
+            <img
+              src="pictures/powerlifting.jpg"
+              alt="Power"
+              width="100%"
+              height="300px"
+            /><span>Strength Training open library</span
+            ><button class="sport-btn">
+              <a href="Strength training.html">Start Learning</a>
+            </button>
+          </div>
+          <div class="sport-choice">
+            <img
+              src="pictures/weightlifting.jpg"
+              alt="lifting"
+              width="100%"
+              height="300px"
+            /><span>Weightlifting open library</span
+            ><button class="sport-btn">
+              <a href="weightlifting.html">Start Learning</a>
+            </button>
+          </div>
+          <div class="sport-choice">
+            <img
+              src="pictures/bodybuilding.webp"
+              alt="building"
+              width="100%"
+              height="300px"
+            /><span>BodyBuilding open library</span
+            ><button class="sport-btn">
+              <a href="BodyBuilding.html">Start Learning</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="workout-schedule before-schedule section hidden">
+        <div class="table-placement">
+          <h3>
+            Choose a library and your schedule will be
+            <span class="Orange-txt">here</span>
+          </h3>
+        </div>
       </section>
       <section class="client-details section hidden">
         <div class="bg-clr">
@@ -212,10 +135,14 @@
             <span class="details">Bmr: 1900 cal</span>
             <hr />
             <span class="details">Bmi: 24.5</span>
-            <hr>
-            <span class="details">My fitness goal is to be the fittest in my field</span>
             <hr />
-            <span class="details">Any past injuries: Yes(fracture front tibia)</span>
+            <span class="details"
+              >My fitness goal is to be the fittest in my field</span
+            >
+            <hr />
+            <span class="details"
+              >Any past injuries: Yes(fracture front tibia)</span
+            >
             <hr />
             <span class="details">chronic diseases: No</span>
             <a href="/assessment page/Assessment.html" class="re-assess"
@@ -224,8 +151,6 @@
           </div>
         </div>
       </section>
-     
-    
     </main>
     <footer>
       <section class="footer-section">
@@ -263,7 +188,7 @@
       </section>
       <button type="button" class="footer-btn"><a href="#">About us</a></button>
     </footer>
-    <script src="workoutBehavior.js"></script>
+
     <script
       src="https://kit.fontawesome.com/7031694be7.js"
       crossorigin="anonymous"

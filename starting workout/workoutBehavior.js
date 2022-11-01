@@ -38,17 +38,23 @@ let chooseAgainBtn = document.querySelector('.choose-again');
 let notChosenTable = document.querySelectorAll('.not-chosen');
 let chosenTable = document.querySelector('.chosen');
 let tbodyEl = document.querySelectorAll('tbody');
+let tableContainerAll = document.querySelector('.table-container-all');
 const currentLocation = Array.location;
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
-// ----------------============= WORKOUTS FUNCTIONALITY ================-------------------
-
-addWrkoutScheduleBtn.forEach((btn, idx) => {
+guideBtns.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
-    console.log(document.querySelector('#day1-second-table').innerHTML);
+    let activeSection = document.querySelector('.active');
+    activeSection.classList.remove('active');
+    sections[idx].classList.add('active');
+
+    let activeBtn = document.querySelector('.clicked');
+    activeBtn.classList.remove('clicked');
+    guideBtns[idx].classList.add('clicked');
   });
 });
+// ----------------============= WORKOUTS FUNCTIONALITY ================-------------------
 
 // ------------------================= TABLE FUNCTUONALITY ====================---------------
 chooseAgainBtn.addEventListener('click', () => {
@@ -79,16 +85,11 @@ chooseScheduleBtn.forEach((btn, idx, e) => {
 function storingTable(idx) {
   if (tableContainer[idx].classList.contains('chosen') === true) {
     let chosenSchedule = document.querySelector('.chosen');
-    localStorage.setItem(
-      'chosenTable',
-      JSON.stringify(chosenSchedule.innerHTML)
-    );
+    // localStorage.setItem('chosenTable');
   }
 }
-let table = JSON.parse(localStorage.getItem('chosenTable'));
-document.addEventListener('DOMContentLoaded', () => {
-  table;
-});
+// let table = localStorage.getItem('chosenTable');
+// tableContainerAll.append(table);
 
 organizeWeekBtn.addEventListener('click', () => {
   scheduleChoice.style.display = 'flex';
@@ -188,18 +189,6 @@ closeArrow.forEach((btn, idx) => {
   });
 });
 //--------------=========== WORKOUT PAGE FUNCTIONALITY ====----------------
-
-guideBtns.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    let activeSection = document.querySelector('.active');
-    activeSection.classList.remove('active');
-    sections[idx].classList.add('active');
-
-    let activeBtn = document.querySelector('.clicked');
-    activeBtn.classList.remove('clicked');
-    guideBtns[idx].classList.add('clicked');
-  });
-});
 
 //-------------------========== SCROLLING FUNCTIONALITY ===========-----------
 
