@@ -97,12 +97,14 @@
           </div>
         </div>
       </section>
-      <section class="workout-schedule before-schedule section hidden">
-        <div class="table-placement">
-          <h3>
-            Choose a library and your schedule will be
-            <span class="Orange-txt">here</span>
-          </h3>
+      <section class="workout-schedule section hidden">
+        <div class="before-schedule">
+          <div class="table-placement">
+            <h3>
+              Choose a library and your schedule will be
+              <span class="Orange-txt">here</span>
+            </h3>
+          </div>
         </div>
       </section>
       <section class="client-details section hidden">
@@ -116,35 +118,52 @@
               height="100px"
             />
             <div>
-              <button class="edit-change" type="submit">Change</button
-              ><span class="v-row"></span>
+              <button class="edit-change" type="submit">Change</button>
               <button class="edit-change">Edit</button>
             </div>
             <button type="submit" class="print-form">Print</button>
           </div>
           <div class="details-container">
-            <span class="details">First Name: Basem</span>
-            <span class="details">Last Name: Elsawy</span>
-            <hr />
-            <span class="details">Age: 24</span>
-            <hr />
-            <span class="details">Weight: 95kg</span>
-            <hr />
-            <span class="details">height: 1.80 m</span>
-            <hr />
-            <span class="details">Bmr: 1900 cal</span>
-            <hr />
-            <span class="details">Bmi: 24.5</span>
-            <hr />
-            <span class="details"
-              >My fitness goal is to be the fittest in my field</span
-            >
-            <hr />
-            <span class="details"
-              >Any past injuries: Yes(fracture front tibia)</span
-            >
-            <hr />
-            <span class="details">chronic diseases: No</span>
+            <div class="containing-details">
+              <div class="inside-details">
+                <h3 class="detail-header">Full Name</h3>
+                <hr class="header-sep" />
+                <span class="details first-name">First Name: Basem</span>
+                <span class="details middle-name">Middle Name: Mohamed</span>
+                <span class="details last-name">Last Name: Elsawy</span>
+              </div>
+              <span class="v-row"></span>
+              <div class="inside-details">
+                <h3 class="detail-header">Details</h3>
+                <hr class="header-sep" />
+                <span class="details age">Age: 24</span>
+                <span class="details weight">Weight: 95kg</span>
+                <span class="details height">height: 1.80 m</span>
+              </div>
+            </div>
+
+            <div class="containing-details">
+              <div class="inside-details">
+                <h3 class="detail-header">Bmi and Bmr</h3>
+                <hr class="header-sep" />
+                <span class="details">Bmr: 1900 cal</span>
+                <span class="details">Bmi: 24.5</span>
+              </div>
+              <span class="v-row"></span>
+              <div class="inside-details">
+                <h3 class="detail-header">Detailed Information</h3>
+                <hr class="header-sep" />
+                <span class="details"
+                  >My fitness goal is to be the fittest in my field</span
+                >
+
+                <span class="details"
+                  >Any past injuries: Yes(fracture front tibia)</span
+                >
+
+                <span class="details">chronic diseases: No</span>
+              </div>
+            </div>
             <a href="/assessment page/Assessment.html" class="re-assess"
               >Re-Test</a
             >

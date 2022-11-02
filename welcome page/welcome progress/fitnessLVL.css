@@ -68,7 +68,7 @@ body {
   text-align: justify;
   width: 200px;
   font-size: 1rem;
-  transition: 0.3s ease;
+  transition: 0.6s ease;
   border: 0.1px solid white;
 }
 .fitness-lvl:nth-child(2) {
@@ -162,6 +162,12 @@ body {
 }
 .links {
   gap: 40px;
+  position: absolute;
+  width: 100%;
+  left: -10px;
+  opacity: 0;
+  display: none;
+  transition: 0.5s ease;
 }
 
 .pages-links {
@@ -175,9 +181,10 @@ body {
   margin: 10px;
   border: 1px solid white;
   position: absolute;
-  transform: translateX(-100%);
+
+  /* transform: translateX(-100%); */
   transition: 0.3s ease;
-  display: none;
+  display: flex;
 }
 .pages-links:hover {
   cursor: pointer;
@@ -194,6 +201,10 @@ body {
   border-radius: 0px 0px 10px 0px;
   top: 60px;
   left: 100px;
+}
+.diff-color {
+  animation: diff-color 2s ease-in-out 1.3s;
+  animation-fill-mode: forwards;
 }
 @keyframes text-load {
   0% {
@@ -274,5 +285,17 @@ body {
     opacity: 1;
 
     transform: translateX(0%);
+  }
+}
+
+@keyframes diff-color {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #223341;
+  }
+  100% {
+    color: #ffae21;
   }
 }

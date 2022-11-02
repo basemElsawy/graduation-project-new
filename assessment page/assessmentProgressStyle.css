@@ -22,11 +22,11 @@
   margin-block: 100px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--background-clr);
+  background-color: #223341;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #32495d;
+  background-color: #32495d;
 }
 /* --------------========= Main Body Content style ==========----------------- */
 
