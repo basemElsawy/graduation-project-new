@@ -201,6 +201,10 @@ label {
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
+  background-color: white;
+  padding: 10px;
+  padding-inline: 50px 50px;
+  border-radius: 10px;
 }
 
 .progress-container {
@@ -327,8 +331,8 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 550px;
   gap: 30px;
 }
 .select-image img {
@@ -361,6 +365,12 @@ label {
 .skip {
   transform: translateY(50px);
   color: #223341b7;
+}
+.steps-header {
+  font-size: 1.5rem;
+  font-weight: light;
+  text-align: center;
+  transform: translateY(-50px);
 }
 .not-selected {
   display: none;

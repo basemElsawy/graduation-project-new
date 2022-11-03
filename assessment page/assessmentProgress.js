@@ -10,21 +10,29 @@ let circles = document.querySelectorAll('.circle');
 let formSection = document.querySelectorAll('.form-section');
 
 let startWrk = document.querySelector('.Start-work');
-
+let boxHdr = document.querySelector('.box-header');
 let currentActives = 1;
 //----------=========== new elements =======---------
-
+let idx = 0;
+console.log(formSection);
 // -------------======== Variables =======---------------
 // -------------================= Event LISTENERS ===========--------------
 
 nextPg.addEventListener('click', () => {
   currentActives++;
+  idx++;
   if (currentActives > circles.length) {
     currentActives = circles.length;
   }
   if (currentActives == 4) {
     nextPg.style.display = 'none';
     startWrk.style.display = 'inline';
+  }
+  document.querySelector('.selected').classList.remove('selected');
+
+  formSection[idx].classList.add('selected');
+  if (idx == 2) {
+    boxHdr.innerHTML = 'Final <span class="Orange-txt"> steps </span> ';
   }
 
   update();
