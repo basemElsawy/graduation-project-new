@@ -7,8 +7,8 @@ let logoImg = document.querySelector('.muscle-img');
 let nextPg = document.querySelector('.Next-page');
 let progress = document.getElementById('progress');
 let circles = document.querySelectorAll('.circle');
-let firstFormPg = document.querySelector('.first');
-let secondFormPg = document.querySelector('.second');
+let formSection = document.querySelectorAll('.form-section');
+
 let startWrk = document.querySelector('.Start-work');
 
 let currentActives = 1;
@@ -22,6 +22,11 @@ nextPg.addEventListener('click', () => {
   if (currentActives > circles.length) {
     currentActives = circles.length;
   }
+  if (currentActives == 4) {
+    nextPg.style.display = 'none';
+    startWrk.style.display = 'inline';
+  }
+
   update();
 });
 //---------------============== update numbers function ===========-------------
@@ -35,15 +40,8 @@ function update() {
     }
   });
   const actives = document.querySelectorAll('.active');
-  progress.style.width = '100%';
-
-  firstFormPg.style.display = 'none';
-
-  secondFormPg.classList.remove('hidden');
-  secondFormPg.style.width = '500px';
-  nextPg.classList.add('hidden');
-  startWrk.classList.remove('hidden');
-  startWrk.style.transform = 'translateX(22px) translateY(-20px)';
+  progress.style.width =
+    ((actives.length - 1) / (circles.length - 1)) * 100 + '%';
 }
 
 // ------------============= SCROLLING FUNCTIONALITY==========-----------

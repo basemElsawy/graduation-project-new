@@ -205,6 +205,7 @@ body {
 .diff-color {
   animation: diff-color 2s ease-in-out 1.3s;
   animation-fill-mode: forwards;
+  transition: 0.5s;
 }
 @keyframes text-load {
   0% {
@@ -289,13 +290,12 @@ body {
 }
 
 @keyframes diff-color {
-  0% {
+  /* 0% {
     color: white;
-  }
-  50% {
-    color: #223341;
-  }
+  } */
+
   100% {
+    letter-spacing: 2px;
     color: #ffae21;
   }
 }
