@@ -6,10 +6,70 @@ let header = document.querySelector('.header');
 let logo = document.querySelector('.logo');
 let navbar = document.querySelector('.navbar');
 let logoImg = document.querySelector('.muscle-img');
+let hiddenTxtElements = document.querySelectorAll('.hide');
+
+let hiddenCards = document.querySelectorAll('.hidden');
+let slide = document.querySelectorAll('.no-slide');
+let topSlide = document.querySelectorAll('.no-top-slide');
 
 // --------------============= VARIABLES ================------------
 let counter = 1;
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+
+const scrollingInTop = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('top-slide');
+    } else {
+      entry.target.classList.remove('top-slide');
+    }
+  });
+});
+topSlide.forEach((el) => {
+  scrollingInTop.observe(el);
+});
+
+const observes = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('slide-down');
+    } else {
+      entry.target.classList.remove('slide-down');
+    }
+  });
+});
+
+slide.forEach((el) => {
+  observes.observe(el);
+});
+
+const observing = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('shown');
+    } else {
+      entry.target.classList.remove('shown');
+    }
+  });
+});
+
+hiddenCards.forEach((el) => {
+  observing.observe(el);
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+hiddenTxtElements.forEach((el) => {
+  observer.observe(el);
+});
+
 document.addEventListener('DOMContentLoaded', function (event) {
   window.onscroll = function () {
     scrollFunction();
@@ -38,6 +98,14 @@ let scrollFunction = () => {
     header.style.marginRight = '0px';
     header.style.marginLeft = '0px';
   }
+  if (
+    document.body.scrollTop > 4300 ||
+    document.documentElement.scrollTop > 4300
+  ) {
+    header.style.marginRight = '0px';
+    header.style.marginLeft = '0px';
+    header.style.borderRadius = '0px 0px 0px 0px';
+  }
 };
 
 setInterval(() => {
@@ -46,6 +114,4 @@ setInterval(() => {
   if (counter > 4) {
     counter = 1;
   }
-}, 2000);
-
-toggleButton.addEvent;
+}, 5000);

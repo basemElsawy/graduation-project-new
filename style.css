@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --background-clr: #223341;
+  --txt-clr: #ffae21;
+}
 /* =========================HEADER SECTION-----NAVBAR=============== */
 .Orange-txt {
   color: #ffae21;
@@ -74,7 +78,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 5px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .background-img {
   background-image: url(barbell.jpg);
@@ -513,20 +517,30 @@ footer {
   background-color: #1f3c53;
   flex-direction: column;
   justify-content: center;
-  max-width: 98%;
+  max-width: 100%;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
   text-align: center;
   color: white;
-  height: 700px;
+  height: auto;
   position: relative;
   margin-bottom: 200px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .content-container img {
-  width: 100%;
-  border-radius: 10px 10px;
-  padding-bottom: 50px;
+  width: 75%;
+  height: 500px;
+  /* border-radius: 10px; */
+  margin-bottom: 50px;
+  border-radius: 0px 0px 20px 20px;
+  border: 5px solid #37526780;
+  box-shadow: 0px 30px 50px 0px black;
+}
+.content-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .content-container p {
@@ -536,7 +550,7 @@ footer {
   margin-right: 10px;
 }
 
-.content-container a {
+/* .content-container a {
   margin-bottom: 50px;
   padding: 20px;
   background-color: #1f3c53;
@@ -547,17 +561,18 @@ footer {
   text-decoration: none;
   box-shadow: 0px 0px 0px 0px #1f3c53;
   border-radius: 0px 0px 20px 20px;
+} */
+
+#last-article {
+  width: 50%;
+  margin: auto;
+  text-align: justify;
 }
-.content-container a:hover {
-  color: #ffae21;
-  cursor: pointer;
-  box-shadow: 0px 25px 35px 0px #1f3b5372;
-}
-.content-container a:active {
-  transform: scale(0.98);
-}
-.para-start {
-  padding: 10px;
+#para-start {
+  width: 50%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .Weightlifting-section {
@@ -590,7 +605,7 @@ footer {
 ::-webkit-scrollbar-track {
   box-shadow: inset 2px 2px 5px var(--background-clr);
   border-radius: 10px;
-  margin-block: 100px;
+  /* margin-block: 100px; */
 }
 ::-webkit-scrollbar-thumb {
   background: var(--background-clr);
@@ -598,4 +613,179 @@ footer {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #32495d;
+}
+
+.easy-start {
+  text-align: center;
+  color: white;
+  background-color: var(--background-clr);
+  padding: 20px;
+  width: fit-content;
+  max-width: 75%;
+  margin: auto;
+  border-radius: 0px 0px 10px 10px;
+}
+.easy-start a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.easy-start a:hover {
+  color: var(--txt-clr);
+  cursor: pointer;
+}
+.slider-section {
+  display: flex;
+  justify-content: space-between;
+}
+.sliderTxt-container {
+  font-size: 1.5rem;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100px);
+
+  transition: all 1s;
+}
+
+.show {
+  filter: blur(0px);
+  transform: translateY(0px);
+
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .hide {
+    transition: none;
+  }
+}
+
+.section-coach {
+  width: 100%;
+  height: auto;
+  margin-bottom: 200px;
+  background: url(pictures/background\ web.png);
+  background-color: var(--background-clr);
+  background-position: -50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: space-between;
+  background-blend-mode: lighten;
+  border: none;
+  padding: 50px;
+}
+
+.coachs-header {
+  text-align: center;
+  color: white;
+}
+
+.coach-card {
+  width: 250px;
+  height: auto;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #2e4659;
+  /* padding-top: 50px; */
+  border-radius: 10px 10px 10px 10px;
+  z-index: 1;
+  gap: 50px;
+  margin: 20px;
+  /* column-gap: 50px; */
+}
+
+.container-ids {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  margin-right: 70px;
+}
+
+.coach-card img {
+  border-radius: 10px 10px 0px 0px;
+}
+.coach-card:nth-child(1) {
+  margin-bottom: 50px;
+  transition-delay: 400ms;
+}
+.coach-card:nth-child(2) {
+  margin-top: 50px;
+  transition: 600ms;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100px);
+  transition: 1s all;
+}
+
+.shown {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0px);
+}
+
+.button {
+  width: 20%;
+  margin: auto;
+  background-color: var(--background-clr);
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 0;
+  transition: 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+.content-container a:hover {
+  color: #ffae21;
+  cursor: pointer;
+  box-shadow: 0px 25px 35px 0px #1f3b5372;
+}
+.no-slide {
+  opacity: 0;
+}
+
+.slide-down {
+  animation: slide-down-animate 0.5s ease 250ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down-animate {
+  0% {
+    z-index: -1;
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  90% {
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(60px);
+  }
+}
+.no-top-slide {
+  z-index: -1;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: 0.8s ease;
+}
+.top-slide {
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0px);
 }

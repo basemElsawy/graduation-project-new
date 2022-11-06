@@ -39,7 +39,7 @@ let notChosenTable = document.querySelectorAll('.not-chosen');
 let chosenTable = document.querySelector('.chosen');
 let tbodyEl = document.querySelectorAll('tbody');
 let tableContainerAll = document.querySelector('.table-container-all');
-const currentLocation = Array.location;
+// ---------------------------================= local variables ===============-----------------
 
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
 
@@ -84,11 +84,16 @@ chooseScheduleBtn.forEach((btn, idx, e) => {
 });
 function storingTable(idx) {
   if (tableContainer[idx].classList.contains('chosen') === true) {
-    let chosenSchedule = document.querySelector('.chosen');
-    // localStorage.setItem('chosenTable');
+    document.querySelector('.chosen');
+    localStorage.setItem(
+      'chosenTable',
+      JSON.stringify(document.querySelector('.chosen').innerHTML)
+    );
   }
 }
-// let table = localStorage.getItem('chosenTable');
+let table = JSON.parse(localStorage.getItem('chosenTable'));
+console.log(table);
+
 // tableContainerAll.append(table);
 
 organizeWeekBtn.addEventListener('click', () => {
