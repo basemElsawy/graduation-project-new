@@ -7,6 +7,22 @@ let frstSideHeader = document.querySelector('.first-side-header');
 
 let secondContentAnimation = document.querySelectorAll('.second-content');
 
+let sideLogos = document.querySelectorAll('.logos');
+
+const logosAnimation = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('logos-appear');
+    } else {
+      entry.target.classList.remove('logos-appear');
+    }
+  });
+});
+
+sideLogos.forEach((el) => {
+  logosAnimation.observe(el);
+});
+
 const secondContentObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
