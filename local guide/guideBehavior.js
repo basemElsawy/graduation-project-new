@@ -7,7 +7,22 @@ let frstSideHeader = document.querySelector('.first-side-header');
 
 let secondContentAnimation = document.querySelectorAll('.second-content');
 
-let sideLogos = document.querySelectorAll('.logos');
+let toDownAnimation = document.querySelectorAll('.merch');
+let sideLogos = document.querySelectorAll('.animation-logo');
+
+const toDownObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('to-down-animation');
+    } else {
+      entry.target.classList.remove('to-down-animation');
+    }
+  });
+});
+
+toDownAnimation.forEach((el) => {
+  toDownObserver.observe(el);
+});
 
 const logosAnimation = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -86,7 +101,6 @@ window.onscroll = function () {
   ) {
     frstMainHeader.classList.add('text-to-left');
   } else {
-    console.log('reached');
     frstMainHeader.classList.remove('text-to-left');
   }
   if (
@@ -95,7 +109,6 @@ window.onscroll = function () {
   ) {
     frstSideHeader.classList.add('text-to-right');
   } else {
-    console.log('reached');
     frstSideHeader.classList.remove('text-to-right');
   }
 };

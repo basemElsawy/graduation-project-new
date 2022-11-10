@@ -518,8 +518,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 100px;
-  top: 2010px;
-  right: 30px;
+  top: 2170px;
+  right: 200px;
   justify-content: center;
   align-items: center;
 }
@@ -549,7 +549,94 @@ body {
   }
 }
 
-.logos-header {
+.merch-header {
+  position: absolute;
+  top: 2060px;
+  left: 550px;
+  color: white;
+}
+#logos-header {
   color: white;
   font-size: var(--med-txt);
+  position: absolute;
+  top: 2050px;
+  right: 25px;
+  opacity: 0;
+}
+
+#shirt-logo {
+  font-size: var(--lrg-txt);
+  opacity: 0.5;
+}
+
+.merch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 100px;
+}
+
+.merch-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.line-six {
+  width: 2px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  left: 641px;
+  top: 2130px;
+  opacity: 0;
+  animation-delay: 250ms;
+}
+.line-seven {
+  width: 2px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  left: 641px;
+  top: 2450px;
+  opacity: 0;
+  animation-delay: 750ms;
+}
+.merchendise-section {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  gap: 40px;
+  top: 2200px;
+  left: 465px;
+  background-color: var(--background-clr-light);
+  border-radius: 20px;
+  animation-delay: 750ms;
+}
+.merch {
+  opacity: 0;
+}
+.to-down-animation {
+  opacity: 0;
+
+  animation: to-down 1s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes to-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
 }
