@@ -7,7 +7,7 @@
   --lrg-txt: 2.5rem;
   --med-txt: 1.5rem;
   --small-txt: 0.8rem;
-  --bg-clr-grad: linear-gradient(45deg, #223341 25%, rgba(20, 34, 85, 0.8));
+  --bg-clr-grad: linear-gradient(360deg, #121c23 50%, rgba(20, 34, 85, 0.5));
 }
 
 * {
@@ -18,7 +18,11 @@
 }
 
 body {
-  background-color: var(--background-clr);
+  background-image: url(pictures/pexels-tima-miroshnichenko-6389513.jpg);
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
   height: auto;
   position: relative;
   overflow-x: hidden;
@@ -38,6 +42,13 @@ body {
   margin: auto;
   align-items: baseline;
   justify-content: space-around;
+}
+.background-grad {
+  width: 100%;
+  height: 555vh;
+  position: absolute;
+  z-index: -1;
+  background-image: var(--bg-clr-grad);
 }
 
 .side-txt {
@@ -525,8 +536,8 @@ body {
 }
 
 .logos {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   visibility: hidden;
   opacity: 0;
   filter: invert(100%);
@@ -629,6 +640,15 @@ body {
   animation: to-down 1s ease;
   animation-fill-mode: forwards;
 }
+
+.merch-second-header {
+  position: absolute;
+  left: 500px;
+  top: 2530px;
+  color: white;
+  animation-delay: 800ms;
+}
+
 @keyframes to-down {
   0% {
     opacity: 0;
@@ -639,4 +659,15 @@ body {
     transform: translateY(20px);
     opacity: 1;
   }
+}
+
+.bottom-image {
+  position: absolute;
+  top: 3500px;
+  left: 140px;
+}
+
+.bottom-image img {
+  filter: invert(100%);
+  opacity: 0.5;
 }
