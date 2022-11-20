@@ -10,6 +10,22 @@ let secondContentAnimation = document.querySelectorAll('.second-content');
 let toDownAnimation = document.querySelectorAll('.merch');
 let sideLogos = document.querySelectorAll('.animation-logo');
 
+let botSect = document.querySelectorAll('.bot-sect');
+
+const botSectUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('bot-sect-an');
+    } else {
+      entry.target.classList.remove('bot-sect-an');
+    }
+  });
+});
+
+botSect.forEach((el) => {
+  botSectUpObserver.observe(el);
+});
+
 const toDownObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

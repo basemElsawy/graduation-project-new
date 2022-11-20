@@ -21,7 +21,7 @@ body {
   background-image: url(pictures/pexels-tima-miroshnichenko-6389513.jpg);
   background-size: cover;
 
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 
   height: auto;
   position: relative;
@@ -45,7 +45,7 @@ body {
 }
 .background-grad {
   width: 100%;
-  height: 555vh;
+  height: 600vh;
   position: absolute;
   z-index: -1;
   background-image: var(--bg-clr-grad);
@@ -612,7 +612,7 @@ body {
   left: 641px;
   top: 2450px;
   opacity: 0;
-  animation-delay: 750ms;
+  animation-delay: 450ms;
 }
 .merchendise-section {
   position: absolute;
@@ -629,7 +629,8 @@ body {
   left: 465px;
   background-color: var(--background-clr-light);
   border-radius: 20px;
-  animation-delay: 750ms;
+  animation-delay: 550ms;
+  box-shadow: 0px 0px 25px black;
 }
 .merch {
   opacity: 0;
@@ -646,7 +647,7 @@ body {
   left: 500px;
   top: 2530px;
   color: white;
-  animation-delay: 800ms;
+  animation-delay: 500ms;
 }
 
 @keyframes to-down {
@@ -664,10 +665,80 @@ body {
 .bottom-image {
   position: absolute;
   top: 3500px;
-  left: 140px;
+  width: 1200px;
+  left: 8%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 450px;
+  align-items: center;
+  color: white;
 }
 
 .bottom-image img {
-  filter: invert(100%);
   opacity: 0.5;
+  position: relative;
+}
+
+.libraries-link {
+  animation-delay: 1s;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.motivational-quote {
+  text-align: center;
+  font-size: var(--med-txt);
+  opacity: 0.7;
+}
+
+.assessing-section {
+  position: absolute;
+  top: 2850px;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 400px;
+  color: white;
+  text-align: center;
+  gap: 30px;
+  border-radius: 10px;
+  background-color: var(--background-clr-light);
+  box-shadow: 0px 0px 25px black;
+}
+
+.assessing-section img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.assessing-section a {
+  color: white;
+  font-size: var(--med-txt);
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.assessing-section a:hover {
+  color: var(--text-clr);
+}
+
+.bot-sect {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.bot-sect-an {
+  animation: bot-sect-up 1s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes bot-sect-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

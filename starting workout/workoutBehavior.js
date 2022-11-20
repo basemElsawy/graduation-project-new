@@ -92,9 +92,8 @@ function storingTable(idx) {
   }
 }
 let table = JSON.parse(localStorage.getItem('chosenTable'));
-console.log(table);
 
-// tableContainerAll.append(table);
+tableContainerAll.insertAdjacentHTML('afterbegin', table);
 
 organizeWeekBtn.addEventListener('click', () => {
   scheduleChoice.style.display = 'flex';
