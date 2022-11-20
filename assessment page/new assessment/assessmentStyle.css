@@ -13,6 +13,10 @@ body {
 :root {
   --backgroundClr: #223341;
   --textClr: #ffae21;
+
+  --med-text: 1rem;
+  --lrg-txt: 2rem;
+  --small-txt: 0.7rem;
 }
 
 ::-webkit-scrollbar {
@@ -75,22 +79,31 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: center;
+  align-items: center;
 }
 .form-container h4 {
   text-align: center;
 }
 .form-header {
-  background-color: #223341;
+  background-color: #22334177;
   width: 20%;
   color: white;
   border-radius: 10px;
   margin: auto;
   padding: 10px;
+  font-size: 1rem;
 }
 .form-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  gap: 1px;
 }
 .second-header {
   background-color: #223341;
@@ -101,18 +114,34 @@ body {
 }
 hr {
   width: 75%;
-  margin: 5px;
-}
-
-.side-bar {
-  width: 50px;
-  height: 500px;
-  position: absolute;
-  left: 0;
-
-  background-color: #32495d;
+  margin: 20px;
 }
 
 .form-container form > input {
   margin-right: 40px;
+}
+
+.form {
+  margin-bottom: 50px;
+}
+
+.small-text {
+  font-size: var(--small-txt);
+}
+textarea {
+  resize: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#questions-form {
+  display: grid;
+  grid-template-rows: repeat(2, 50px);
+  grid-template-columns: repeat(6, 200px);
+  grid-row-gap: 50px;
+  grid-column-gap: 10px;
+  align-items: center;
+  /* justify-items: center; */
 }

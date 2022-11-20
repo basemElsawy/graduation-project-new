@@ -48,7 +48,6 @@
           below
         </div>
       </div>
-      <div class="side-bar"></div>
       <section class="form-section">
         <div class="form-container">
           <h4 class="form-header">Personal Details</h4>
@@ -70,30 +69,103 @@
         </div>
         <hr />
         <div class="form-container">
-          <h4 class="form-header">fitness details</h4>
+          <h4 class="form-header">Body assessment</h4>
           <form action="url" class="form">
-            <label for="FirstName">First name</label>
-            <input type="text" name="firstname" id="FirstName" />
+            <label for="Weight"
+              >Weight<span class="small-text"> in kg</span></label
+            >
+            <input title="weight" type="number" name="weight" id="Weight" />
 
-            <label for="MidName">Middle name</label>
-            <input type="text" name="midname" id="MidName" />
+            <label for="Height"
+              >Height<span class="small-text"> in metres</span>
+            </label>
+            <input type="number" name="height" id="Height" />
 
-            <label for="lastName">Last name</label>
-            <input type="text" name="lastname" id="LastName" />
+            <label for="Age">Age</label>
+            <input type="number" name="Age" id="Age" />
           </form>
         </div>
         <hr />
         <div class="form-container">
           <h4 class="form-header">fitness details</h4>
+          <form action="url" class="form" id="questions-form">
+            <label for="quest-1">what drives you to train ?</label>
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="3"
+              placeholder="your answer here"
+            ></textarea>
+            <label for="quest-1"
+              >Whats the type of food that you ingest on a normal daily basis
+              ?</label
+            >
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="3"
+              placeholder="your answer here"
+            ></textarea>
+            <label for="quest-1"
+              >What is your prefered style of training?</label
+            >
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="3"
+              placeholder="your answer here"
+            ></textarea>
+            <label for="quest-1"
+              >Do you have anyone in your family that motivate you or inspire
+              you to do good?</label
+            >
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="3"
+              placeholder="your answer here"
+            ></textarea>
+            <label for="quest-1"
+              >how hard it is to do any type of activity for you on a daily
+              basis?</label
+            >
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="3"
+              placeholder="your answer here"
+            ></textarea>
+            <label for="quest-1"
+              >have you gotten your self injured before?</label
+            >
+            <textarea
+              name="question"
+              id="quest-1"
+              cols="30"
+              rows="2"
+              placeholder="your answer here"
+            ></textarea>
+          </form>
+        </div>
+        <hr />
+        <div class="form-container">
+          <h4 class="form-header">Body assessment</h4>
           <form action="url" class="form">
-            <label for="FirstName">First name</label>
-            <input type="text" name="firstname" id="FirstName" />
+            <label for="user name">User name</label>
+            <input title="weight" type="number" name="username" id="username" />
 
-            <label for="MidName">Middle name</label>
-            <input type="text" name="midname" id="MidName" />
+            <label for="password"
+              >Password</span>
+            </label>
+            <input type="password" name="password" id="password" />
 
-            <label for="lastName">Last name</label>
-            <input type="text" name="lastname" id="LastName" />
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" placeholder="Ex:champion@pocket-coach.com" />
           </form>
         </div>
       </section>
