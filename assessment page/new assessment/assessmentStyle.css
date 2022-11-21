@@ -104,13 +104,14 @@ body {
   width: 90%;
   margin: auto;
   gap: 1px;
+  font-weight: bold;
 }
 .second-header {
   background-color: #223341;
   width: 100%;
   color: white;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 hr {
   width: 75%;
@@ -144,4 +145,30 @@ textarea {
   grid-column-gap: 10px;
   align-items: center;
   /* justify-items: center; */
+}
+
+.image-container img {
+  border-radius: 50%;
+  border: 5px solid var(--backgroundClr);
+}
+
+#account-container {
+  display: flex;
+  gap: 5px;
+}
+#account-container .form-header {
+  margin-bottom: 30px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.image-container button {
+  background-color: var(--backgroundClr);
+  font-size: var(--med-text);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
