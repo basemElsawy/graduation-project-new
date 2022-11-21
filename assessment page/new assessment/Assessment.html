@@ -31,6 +31,7 @@
       </ul>
     </header>
     <main class="main-content">
+
       <div class="bg-img">
         <div class="overlay-clr"></div>
         <div class="headers">
@@ -48,7 +49,38 @@
           below
         </div>
       </div>
+      <div class="background-blue">
       <section class="form-section">
+        <div class="form-container" id="account-container">
+          <h4 class="form-header">Sign up</h4>
+          <div class="image-container">
+            <img src="pictures/user profile.jpg" width="150px" height="150px" alt="user">
+            
+            <button class="btn-add">Add an image</button>
+          </div>
+          <form action="url" class="form" >
+            <label for="user name">User name</label>
+            <input title="weight" type="text" name="username" id="username" />
+
+            <label for="psw"
+              >Password</span>
+            </label>
+            
+              <div id="message">
+                <h3>Password must contain the following:</h3>
+                 <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                 <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                 <p id="number" class="invalid">A <b>number</b></p>
+                 <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+              </div>
+            
+            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" placeholder="Ex:champion@pocket-coach.com" />
+          </form>
+        </div>
+    <!-- <hr> -->
         <div class="form-container">
           <h4 class="form-header">Personal Details</h4>
           <form action="url" class="form">
@@ -67,7 +99,9 @@
             </select>
           </form>
         </div>
-        <hr />
+        <!-- <hr /> -->
+       
+        <!-- <hr /> -->
         <div class="form-container">
           <h4 class="form-header">Body assessment</h4>
           <form action="url" class="form">
@@ -84,12 +118,9 @@
             <label for="Age">Age</label>
             <input type="number" name="Age" id="Age" />
           </form>
-        </div>
-        <hr />
-        <div class="form-container">
-          <h4 class="form-header">Fitness details</h4>
+         
           <form action="url" class="form" id="questions-form">
-            <label for="quest-1">what drives you to train ?</label>
+            <label for="quest-1">1-what drives you to train ?</label>
             <textarea
               name="question"
               id="quest-1"
@@ -98,7 +129,7 @@
               placeholder="your answer here"
             ></textarea>
             <label for="quest-1"
-              >Whats the type of food that you ingest on a normal daily basis
+              >2-Whats the type of food that you ingest on a normal daily basis
               ?</label
             >
             <textarea
@@ -109,7 +140,7 @@
               placeholder="your answer here"
             ></textarea>
             <label for="quest-1"
-              >What is your prefered style of training?</label
+              >3-What is your prefered style of training?</label
             >
             <textarea
               name="question"
@@ -119,7 +150,7 @@
               placeholder="your answer here"
             ></textarea>
             <label for="quest-1"
-              >Do you have anyone in your family that motivate you or inspire
+              >4-Do you have anyone in your family that motivate you or inspire
               you to do good?</label
             >
             <textarea
@@ -130,7 +161,7 @@
               placeholder="your answer here"
             ></textarea>
             <label for="quest-1"
-              >how hard it is to do any type of activity for you on a daily
+              >5-how hard it is to do any type of activity for you on a daily
               basis?</label
             >
             <textarea
@@ -141,40 +172,21 @@
               placeholder="your answer here"
             ></textarea>
             <label for="quest-1"
-              >have you gotten your self injured before?</label
+              >6-have you gotten your self injured before?</label
             >
             <textarea
               name="question"
               id="quest-1"
               cols="30"
-              rows="2"
+              rows="3"
               placeholder="your answer here"
             ></textarea>
           </form>
-        </div>
-        <hr />
-        <div class="form-container" id="account-container">
-          <h4 class="form-header">Body assessment</h4>
-          <form action="url" class="form" >
-            <label for="user name">User name</label>
-            <input title="weight" type="number" name="username" id="username" />
-
-            <label for="password"
-              >Password</span>
-            </label>
-            <input type="password" name="password" id="password" />
-
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" placeholder="Ex:champion@pocket-coach.com" />
-          </form>
-          <div class="image-container">
-            <img src="pictures/user profile.jpg" width="150px" height="150px" alt="user">
-            
-            <button>Add an image</button>
-          </div>
-        </div>
-
-      </section>
+          <!-- <hr /> -->
+           
+          <button class="btn-submit">Submit</button>
+        </section>
+      </div>
     </main>
     <footer>
       <section class="footer-section">
@@ -209,6 +221,7 @@
             </ul>
           </div>
         </div>
+      </div>
       </section>
       <button type="button" class="footer-btn">
         <a href="/Home.html">About us</a>
