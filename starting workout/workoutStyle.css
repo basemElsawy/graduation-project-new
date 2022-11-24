@@ -25,11 +25,11 @@ main {
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 2px 2px 5px var(--background-clr);
-  border-radius: 10px;
-  background-color: transparent;
+  /* border-radius: 10px; */
+  background-color: var(--background-clr);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--background-clr);
+  background: #244e70;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -260,51 +260,6 @@ main {
   cursor: pointer;
 }
 
-.table-head th {
-  border: 3px solid rgb(0, 0, 0);
-  gap: 0;
-}
-.table-head td {
-  border: 3px solid rgb(0, 0, 0);
-  gap: 0;
-}
-.table-body td {
-  border: 3px solid rgb(0, 0, 0);
-  gap: 0;
-}
-.table-body th {
-  border: 3px solid rgb(0, 0, 0);
-  gap: 0;
-}
-
-.workout-chart {
-  text-align: center;
-  width: 80%;
-  max-width: 80%;
-  margin: auto;
-  color: black;
-  height: 800px;
-  max-height: auto;
-  /* display: none;
-  visibility: hidden; */
-  padding: 50px;
-  transition: 0.5s ease;
-}
-.workout-schedule {
-  background-color: var(--background-clr);
-  width: 90%;
-  max-width: 90%;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  height: 550px;
-  max-height: auto;
-}
-.table-container-all {
-  background-color: white;
-  border-radius: 5px;
-  width: 100%;
-}
 .clicked {
   background-color: #324b5f;
 }
@@ -538,6 +493,20 @@ hr {
   padding: 10px;
   border-radius: 10px;
   display: none;
+}
+.Remove-Exercise {
+  background-color: var(--background-clr);
+  font-size: 0.7rem;
+  font-weight: bold;
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+.Remove-Exercise:hover {
+  color: var(--text-Clr);
+  cursor: pointer;
 }
 
 .choose-again:hover {

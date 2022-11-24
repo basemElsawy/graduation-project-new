@@ -604,11 +604,12 @@ footer {
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 2px 2px 5px var(--background-clr);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* margin-block: 100px; */
+  background-color: var(--background-clr);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--background-clr);
+  background: #244662;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -717,11 +718,11 @@ footer {
   border-radius: 10px 10px 0px 0px;
 }
 .coach-card:nth-child(1) {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   transition-delay: 400ms;
 }
 .coach-card:nth-child(2) {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   transition: 600ms;
 }
 

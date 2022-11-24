@@ -17,11 +17,10 @@ body {
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 2px 2px 5px var(--background-clr);
-  border-radius: 10px;
-  margin-block: 100px;
+  background-color: #223341;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--background-clr);
+  background: #1e4667;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {

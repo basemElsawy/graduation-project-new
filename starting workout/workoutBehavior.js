@@ -57,52 +57,6 @@ guideBtns.forEach((btn, idx) => {
 // ----------------============= WORKOUTS FUNCTIONALITY ================-------------------
 
 // ------------------================= TABLE FUNCTUONALITY ====================---------------
-chooseAgainBtn.addEventListener('click', () => {
-  document.querySelector('.chosen').classList.add('not-chosen');
-  document.querySelector('.chosen').classList.remove('chosen');
-  workoutSchedule.style.height = '600px';
-  welcomeContainer.style.display = 'flex';
-  chooseAgainBtn.style.display = 'none';
-  setTimeout(() => {
-    welcomeContainer.style.opacity = '1';
-  }, 350);
-});
-
-chooseScheduleBtn.forEach((btn, idx, e) => {
-  btn.addEventListener('click', () => {
-    tableContainer[idx].classList.remove('not-chosen');
-    tableContainer[idx].classList.add('chosen');
-    workoutSchedule.style.height = 'auto';
-    scheduleChoice.style.opacity = '0';
-    chooseAgainBtn.style.display = 'inline';
-    storingTable(idx);
-
-    setTimeout(() => {
-      scheduleChoice.style.display = 'none';
-    }, 350);
-  });
-});
-function storingTable(idx) {
-  if (tableContainer[idx].classList.contains('chosen') === true) {
-    document.querySelector('.chosen');
-    localStorage.setItem(
-      'chosenTable',
-      JSON.stringify(document.querySelector('.chosen').innerHTML)
-    );
-  }
-}
-let table = JSON.parse(localStorage.getItem('chosenTable'));
-
-tableContainerAll.insertAdjacentHTML('afterbegin', table);
-
-organizeWeekBtn.addEventListener('click', () => {
-  scheduleChoice.style.display = 'flex';
-  welcomeContainer.style.opacity = '0';
-  setTimeout(() => {
-    scheduleChoice.style.opacity = '1';
-    welcomeContainer.style.display = 'none';
-  }, 350);
-});
 
 // ----------------================== MUSCLE PANEL FUNCTIONALITY ================--------------------------
 moreExercsiesBtn.forEach((btn, idx) => {
@@ -225,3 +179,17 @@ let scrollFunction = () => {
     header.style.marginLeft = '0px';
   }
 };
+
+// -----------===================commented block of code =================------------
+// function storingTable(idx) {
+//   if (tableContainer[idx].classList.contains('chosen') === true) {
+//     document.querySelector('.chosen');
+//     localStorage.setItem(
+//       'chosenTable',
+//       JSON.stringify(document.querySelector('.chosen').innerHTML)
+//     );
+//   }
+// }
+// let table = JSON.parse(localStorage.getItem('chosenTable'));
+
+// tableContainerAll.insertAdjacentHTML('afterbegin', table);

@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/7031694be7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="strengthBehavior.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -111,7 +112,7 @@
                         seconds isometric and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -133,7 +134,7 @@
                         seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -156,7 +157,7 @@
                         and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -214,7 +215,7 @@
                         seconds isometric and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -236,7 +237,7 @@
                         seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -259,7 +260,7 @@
                         and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -316,7 +317,7 @@
                         seconds isometric and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -338,7 +339,7 @@
                         seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -361,7 +362,7 @@
                         and 30 seconds dynamic
                       </span>
                       <br />
-                      <button class="add-schedule">Add to schedule</button>
+                      <button class="add-schedule">Add to favorites</button>
                     </div>
                     <iframe
                       width="400"
@@ -518,7 +519,7 @@
                       30 secs between sets.
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -543,7 +544,7 @@
                       reps and rest for 1 min and 30 secs between sets
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -565,7 +566,7 @@
                       sets by 10 or 12 reps and rest 30 to 45 secs between sets
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -710,7 +711,7 @@
                       30 secs between sets.
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -733,7 +734,7 @@
                       reps and rest for 1 min and 30 secs between sets
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -755,7 +756,7 @@
                       sets by 10 or 12 reps and rest 30 to 45 secs between sets
                     </span>
                     <br />
-                    <button class="add-schedule">Add to schedule</button>
+                    <button class="add-schedule">Add to favorites</button>
                   </div>
                   <iframe
                     width="400"
@@ -875,381 +876,25 @@
       </section>
 
       <section class="workout-schedule section hidden">
-        <div class="welcome-container">
-          <h2>
-            Welcome to your
-            <span class="Orange-txt" id="orange">exercising</span> table
-          </h2>
-          <span>click the following button</span>
-          <button class="organize-week-btn">Start</button>
-        </div>
-        <div class="table-container-all">
-          <div class="table-container not-chosen">
-            <table class="workout-chart three-days-week">
-              <thead>
-                <th colspan="1"><h2>Day1</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body" id="day1-first-table">
-                  <td>workout 1</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day2</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body" id="day2-first-table">
-                  <td>workout 2</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day3</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body" id="day3-first-table">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="4">
-                    make sure you do the workouts as written Good luck
-                  </th>
-                </tr>
-              </tfoot>
-            </table>
+        <div class="section-container">
+          <div class="section-mssg">
+            <span
+              >selected favorite <span class="Orange-txt"> workouts </span>will
+              be added in this list</span
+            >
           </div>
-          <div class="table-container not-chosen">
-            <table class="workout-chart four-days-week">
-              <thead>
-                <th colspan="1"><h2>Day1</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body" id="day1-second-table">
-                  <td>workout 1</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day2</h2></th>
-                <tr class="table-head" id="day2-second-table">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 2</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day3</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body" id="day3-second-table">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day4</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body" id="day4-second-table">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="4">
-                    make sure you do the workouts as written Good luck
-                  </th>
-                </tr>
-              </tfoot>
-            </table>
+          <div class="container-header">
+            <h3>Selected favourites</h3>
           </div>
-          <div class="table-container not-chosen">
-            <table class="workout-chart five-days-week">
-              <thead>
-                <th colspan="1"><h2>Day1</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body" id="day5-second-table">
-                <tr class="table-body">
-                  <td>workout 1</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day2</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 2</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day3</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day4</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day5</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="4">
-                    make sure you do the workouts as written Good luck
-                  </th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-          <div class="table-container not-chosen">
-            <table class="workout-chart six-days-week">
-              <thead>
-                <th colspan="1"><h2>Day1</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 1</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day2</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 2</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day3</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day4</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day5</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <thead>
-                <th colspan="1"><h2>Day6</h2></th>
-                <tr class="table-head">
-                  <th>Exercise</th>
-                  <th>Rep Range</th>
-                  <th>Precentages</th>
-                  <th>Comment and instructions</th>
-                </tr>
-              </thead>
-              <tbody class="tab-body">
-                <tr class="table-body">
-                  <td>workout 3</td>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th colspan="4">
-                    make sure you do the workouts as written Good luck
-                  </th>
-                </tr>
-              </tfoot>
-            </table>
+          <div class="favorites-container">
+            <div class="fav-content" id="accessorie-lifts">
+              <h4 class="fav-content-header">Accessorie Lifts</h4>
+            </div>
+            <div class="fav-content" id="main-lifts">
+              <h4 class="fav-content-header">Main Lifts</h4>
+            </div>
           </div>
         </div>
-        <div class="schedule-choice">
-          <h3>
-            Here you make your own <span class="Orange-txt">schedule</span>
-          </h3>
-          <span
-            >choose from the following buttons to choose a schedule style.</span
-          >
-          <div class="btn-schedule-choose">
-            <button class="choose-schedule-btn">3 days a week</button>
-            <button class="choose-schedule-btn">4 days a week</button>
-            <button class="choose-schedule-btn">5 days a week</button>
-            <button class="choose-schedule-btn">6 days a week</button>
-          </div>
-        </div>
-        <button type="submit" class="choose-again">Choose Again</button>
       </section>
       <section class="client-details section hidden">
         <div class="bg-clr">
