@@ -11,6 +11,7 @@ let hiddenTxtElements = document.querySelectorAll('.hide');
 let hiddenCards = document.querySelectorAll('.hidden');
 let slide = document.querySelectorAll('.no-slide');
 let topSlide = document.querySelectorAll('.no-top-slide');
+let linearBackground = document.querySelector('.linear-gradient');
 
 // --------------============= VARIABLES ================------------
 let counter = 1;
@@ -105,6 +106,15 @@ let scrollFunction = () => {
     header.style.marginRight = '0px';
     header.style.marginLeft = '0px';
     header.style.borderRadius = '0px 0px 0px 0px';
+  }
+  if (
+    document.body.scrollTop > 750 ||
+    (document.documentElement.scrollTop > 750 &&
+      document.documentElement.scrollTop < 1500)
+  ) {
+    linearBackground.classList.add('background-animation');
+  } else {
+    linearBackground.classList.remove('background-animation');
   }
 };
 

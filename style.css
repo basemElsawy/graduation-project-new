@@ -35,7 +35,7 @@ body {
   filter: invert(100%);
   position: absolute;
   bottom: -20%;
-  right: 49.5%;
+  right: 47%;
 }
 .hlf {
   font-weight: bolder;
@@ -238,8 +238,63 @@ body {
   right: 35%;
 }
 
-/* -------------------------=============================SLIDER-SECTION===========------------------ */
+.PowerLifting-sect {
+  background-image: url(pictures/forpowerlifting.jpg);
 
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  color: white;
+  height: auto;
+  width: 90%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
+  padding: 50px;
+  z-index: -1;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.linear-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.8) 10%,
+    #30689679 30%,
+    #223341 40%
+  );
+  background-position: 100% 100%;
+
+  background-size: 300% 300%;
+  /* animation-iteration-count: infinite; */
+  /* animation-fill-mode: forwards; */
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 10px;
+}
+.background-animation {
+  animation: backgroundColor 1s ease;
+
+  animation-fill-mode: forwards;
+}
+.para-content-PL {
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  z-index: 10;
+  gap: 20px;
+}
+.powerlifting-para {
+  width: 100%;
+}
+/* -------------------------=============================SLIDER-SECTION===========------------------ */
 .slider-section {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -621,9 +676,10 @@ footer {
   color: white;
   background-color: var(--background-clr);
   padding: 20px;
-  width: fit-content;
-  max-width: 75%;
-  margin: auto;
+  margin-left: 32rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-bottom: 50px;
   border-radius: 0px 0px 10px 10px;
 }
 .easy-start a {
@@ -789,4 +845,14 @@ footer {
   z-index: 1;
   opacity: 1;
   transform: translateY(0px);
+}
+
+.head-align {
+  text-align: center;
+}
+
+@keyframes backgroundColor {
+  100% {
+    background-position: 0% 0%;
+  }
 }
