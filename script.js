@@ -12,10 +12,38 @@ let hiddenCards = document.querySelectorAll('.hidden');
 let slide = document.querySelectorAll('.no-slide');
 let topSlide = document.querySelectorAll('.no-top-slide');
 let linearBackground = document.querySelector('.linear-gradient');
-
+let imageContainer = document.querySelectorAll('.img-container');
+let noOpacityText = document.querySelectorAll('.no-opacity');
 // --------------============= VARIABLES ================------------
 let counter = 1;
 // -----------========= FUNCTIONS & EVENT LISTENERS =======--------
+
+let bodyBuildingimg = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('img-con-onslide');
+    } else {
+      entry.target.classList.remove('img-con-onslide');
+    }
+  });
+});
+imageContainer.forEach((el) => {
+  bodyBuildingimg.observe(el);
+});
+
+const bodyBuildingObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear-onslide');
+    } else {
+      entry.target.classList.remove('appear-onslide');
+    }
+  });
+});
+
+noOpacityText.forEach((el) => {
+  bodyBuildingObserver.observe(el);
+});
 
 const scrollingInTop = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -108,8 +136,8 @@ let scrollFunction = () => {
     header.style.borderRadius = '0px 0px 0px 0px';
   }
   if (
-    document.body.scrollTop > 750 ||
-    (document.documentElement.scrollTop > 750 &&
+    document.body.scrollTop > 500 ||
+    (document.documentElement.scrollTop > 500 &&
       document.documentElement.scrollTop < 1500)
   ) {
     linearBackground.classList.add('background-animation');

@@ -207,7 +207,7 @@ body {
   margin-top: -5px;
 }
 .para-2 {
-  width: 600px;
+  width: 500px;
 }
 
 .aesth-container {
@@ -854,5 +854,86 @@ footer {
 @keyframes backgroundColor {
   100% {
     background-position: 0% 0%;
+  }
+}
+.bodybuilding-header {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.bodybuilding-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Bodybuilding-section {
+  margin-bottom: 100px;
+}
+.img {
+  border-radius: 10px;
+}
+
+.img-container {
+  height: 350px;
+  width: 400px;
+  position: relative;
+}
+
+.small-header-1 {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: white;
+}
+
+.small-header-2 {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: white;
+}
+.no-opacity {
+  opacity: 0;
+}
+.appear-onslide {
+  animation: appear-onslide 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes appear-onslide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.img-container {
+  margin-top: 50px;
+  opacity: 0;
+}
+
+.img-con-onslide {
+  animation: appear-con-onslide 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear-con-onslide {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+    filter: blur(0px);
   }
 }
