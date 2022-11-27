@@ -127,17 +127,14 @@ let scrollFunction = () => {
     header.style.marginRight = '0px';
     header.style.marginLeft = '0px';
   }
-  if (
-    document.body.scrollTop > 4300 ||
-    document.documentElement.scrollTop > 4300
-  ) {
+  if (document.documentElement.scrollTop > 4900) {
     header.style.marginRight = '0px';
     header.style.marginLeft = '0px';
     header.style.borderRadius = '0px 0px 0px 0px';
   }
   if (
     document.body.scrollTop > 500 ||
-    (document.documentElement.scrollTop > 500 &&
+    (document.documentElement.scrollTop > 400 &&
       document.documentElement.scrollTop < 1500)
   ) {
     linearBackground.classList.add('background-animation');

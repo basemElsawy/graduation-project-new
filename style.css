@@ -294,6 +294,14 @@ body {
 .powerlifting-para {
   width: 100%;
 }
+.bodyBuilding-para {
+  /* background-color: var(--background-clr); */
+
+  padding: 20px;
+  /* color: white; */
+  border-radius: 10px;
+}
+
 /* -------------------------=============================SLIDER-SECTION===========------------------ */
 .slider-section {
   margin-top: 5rem;
@@ -639,10 +647,12 @@ footer {
 .article-lifting {
   text-align: justify;
   margin-right: 100px;
+  z-index: 1;
 }
 .section-image {
   position: relative;
 }
+
 .section-image img {
   border-radius: 10px 0px 0px 10px;
 }
@@ -726,7 +736,9 @@ footer {
 }
 
 .section-coach {
-  width: 100%;
+  width: 90%;
+  border-radius: 10px;
+  margin: 200px auto;
   height: auto;
   margin-bottom: 200px;
   background: url(pictures/background\ web.png);
@@ -877,26 +889,33 @@ footer {
   margin-bottom: 100px;
 }
 .img {
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 10px solid var(--background-clr);
+  /* opacity: 0.9; */
+  background: var(--background-clr);
+  background-size: cover;
+  background-position: 300% 300%;
 }
 
 .img-container {
   height: 350px;
   width: 400px;
   position: relative;
+  background-color: var(--background-clr);
+  border-radius: 50%;
 }
 
 .small-header-1 {
   position: absolute;
-  bottom: 0;
-  right: 10px;
+  bottom: 10px;
+  right: 33%;
   color: white;
 }
 
 .small-header-2 {
   position: absolute;
-  bottom: 0;
-  left: 10px;
+  bottom: 20px;
+  left: 35%;
   color: white;
 }
 .no-opacity {
@@ -921,7 +940,7 @@ footer {
 }
 
 .img-con-onslide {
-  animation: appear-con-onslide 1s ease-in-out;
+  animation: appear-con-onslide 550ms ease-in-out;
   animation-fill-mode: forwards;
 }
 

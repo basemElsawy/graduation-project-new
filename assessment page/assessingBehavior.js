@@ -23,9 +23,24 @@ let letter = document.getElementById('letter');
 let capital = document.getElementById('capital');
 let number = document.getElementById('number');
 let length = document.getElementById('length');
+const imageInput = document.querySelector('#input-image');
+const imageInside = document.querySelector('.image-unknown');
+var uploadedImage = '';
 // -------------======== Variables =======---------------
 
 // -------------================= Event LISTENERS ===========--------------
+imageInput.addEventListener('change', (e) => {
+  const imageIndex = imageInput.files[0];
+  const reader = new FileReader();
+  imageInside.removeAttribute('src');
+  reader.addEventListener('load', () => {
+    uploadedImage = reader.result;
+    imageInside.setAttribute('src', uploadedImage);
+  });
+
+  reader.readAsDataURL(imageIndex);
+});
+
 passwordInput.onfocus = () => {
   document.getElementById('message').style.display = 'block';
 };

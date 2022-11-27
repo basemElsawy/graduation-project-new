@@ -153,16 +153,24 @@ textarea {
 #questions-form {
   display: grid;
   grid-template-rows: repeat(2, 50px);
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(2, 500px);
   grid-row-gap: 50px;
   grid-column-gap: 10px;
   align-items: center;
   /* justify-items: center; */
 }
 
-.image-container img {
+.image-unknown {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
-  border: 5px solid var(--backgroundClr);
+}
+#display-image {
+  border-radius: 50%;
+  background-color: var(--backgroundClr);
+  width: 175px;
+  height: 111px;
+  padding: 5px;
 }
 
 #account-container {
@@ -179,10 +187,15 @@ textarea {
 }
 
 .image-container {
+  transform: translateY(-20px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
   gap: 10px;
-  transform: translateY(-20px);
+  background-color: var(--background-clr);
+  padding: 5px;
 }
 .image-container button {
   background-color: var(--backgroundClr-light);
@@ -281,4 +294,25 @@ textarea:focus {
   left: 0;
   content: '✔';
   transition: 0.3s all;
+}
+
+.label-imageSlct input {
+  display: none;
+}
+
+.label-imageSlct {
+  background-color: var(--backgroundClr);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.label-imageSlct:hover {
+  color: var(--textClr);
+}
+
+.small-txt {
+  font-size: 0.7rem;
 }

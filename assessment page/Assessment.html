@@ -54,9 +54,15 @@
         <div class="form-container" id="account-container">
           <h4 class="form-header">Sign up</h4>
           <div class="image-container">
-            <img src="pictures/user profile.jpg" width="150px" height="150px" alt="user">
-            
-            <button class="btn-add">Add an image</button>
+           <div id="display-image"> 
+            <img class="image-unknown" src="pictures/user profile.jpg" width="150px" height="150px" alt="user">
+           </div>
+           <label class="label-imageSlct" for="input-image">
+            Select an image
+            <input class="btn-add" id="input-image" type="file" accept="image/png" accept="image/jpg">  
+            <i class="fa-solid fa-camera"></i>          
+          </label>
+          <span class="small-txt">image has to be .png</span>
           </div>
           <form action="url" class="form" >
             <label for="user name">User name</label>
