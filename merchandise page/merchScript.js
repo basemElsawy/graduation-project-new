@@ -87,10 +87,17 @@ function feesFunc() {
 // this one was not workig as it loads on the already existing remove btn and assign the event listener ( even before the items were added to the cart )
 /*removeBtn.forEach((btn, idx) => {
   btn.addEventListener('click', () => {
+<<<<<<< HEAD
     
 console.log ("item clicked for remove ");
     
     
+=======
+	  
+console.log ("item clicked for remove ");
+	  
+	  
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
   });
   });*/
 
@@ -110,8 +117,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
   window.onscroll = function () {
     scrollFunction();
   };
+<<<<<<< HEAD
   sideCheckoutMenu.style.display = 'none';
   shoppingCart.style.display = 'none';
+=======
+  sideCheckoutMenu.style.width = '0%';
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
 });
 
 let scrollFunction = () => {
@@ -148,6 +159,7 @@ let scrollFunction = () => {
     cartBtn.style.visibility = 'hidden';
     shoppingCart.style.visibility = 'hidden';
   }
+<<<<<<< HEAD
   if (document.documentElement.scrollTop >= 205) {
     sideCheckoutMenu.style.display = 'inline';
     sideCheckoutMenu.style.width = '0%';
@@ -165,6 +177,16 @@ let scrollFunction = () => {
   } else {
 
     shoppingCart.style.transform = 'scale(0.0)';
+=======
+  if (
+    document.body.scrollTop > 305 ||
+    document.documentElement.scrollTop > 305
+  ) {
+    shoppingCart.style.transform = 'scale(1)';
+    shoppingCart.style.borderRadius = '10px 0px 0px 10px';
+  } else {
+    shoppingCart.style.transform = 'scale(0.05)';
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
     shoppingCart.style.borderRadius = '10px';
   }
 };

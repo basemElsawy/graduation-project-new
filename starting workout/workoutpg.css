@@ -10,7 +10,10 @@
 .active {
   display: flex;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
 .before-schedule {
   background-color: white;
   border: 20px solid var(--background-clr);
@@ -20,6 +23,7 @@
   font-size: 1.5rem;
   width: 200vh;
 }
+<<<<<<< HEAD
 
 #sign-up {
   color: white;
@@ -60,3 +64,5 @@
   width: 100%;
 
 }
+=======
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824

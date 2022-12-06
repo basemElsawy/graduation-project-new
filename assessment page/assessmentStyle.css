@@ -105,13 +105,21 @@ body {
   align-items: center;
   height: auto;
   position: relative;
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 90%;
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
   margin: auto;
   gap: 50px;
   font-weight: bold;
   background-color: white;
   padding: 10px;
+<<<<<<< HEAD
   border: 10px solid var(--backgroundClr);
+=======
+  border: 5px solid var(--backgroundClr);
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
 }
 .second-header {
   background-color: #223341;
@@ -241,7 +249,14 @@ textarea:focus {
   background-color: var(--backgroundClr);
 }
 
+<<<<<<< HEAD
 
+=======
+.background-blue {
+  background-color: var(--backgroundClr);
+  width: 100%;
+}
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
 
 .btn-submit {
   padding: 10px 10px;

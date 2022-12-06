@@ -115,6 +115,7 @@ let scrollFunction = () => {
     logo.style.transform = 'scale(1.2)';
     header.style.boxShadow = 'none';
   }
+<<<<<<< HEAD
   // if (
   //   document.body.scrollTop > 750 ||
   //   document.documentElement.scrollTop > 750
@@ -132,6 +133,25 @@ let scrollFunction = () => {
   //   header.style.marginLeft = '0px';
   //   header.style.borderRadius = '0px 0px 0px 0px';
   // }
+=======
+  if (
+    document.body.scrollTop > 750 ||
+    document.documentElement.scrollTop > 750
+  ) {
+    header.style.borderRadius = '0px 0px 10px 10px';
+    header.style.marginRight = '10px';
+    header.style.marginLeft = '10px';
+  } else {
+    header.style.borderRadius = '0px 0px 0px 0px';
+    header.style.marginRight = '0px';
+    header.style.marginLeft = '0px';
+  }
+  if (document.documentElement.scrollTop > 4900) {
+    header.style.marginRight = '0px';
+    header.style.marginLeft = '0px';
+    header.style.borderRadius = '0px 0px 0px 0px';
+  }
+>>>>>>> 74b418bff6bd5718353820116a7bdb5db4405824
   if (
     document.body.scrollTop > 500 ||
     (document.documentElement.scrollTop > 400 &&
