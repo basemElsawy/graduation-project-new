@@ -1,0 +1,62 @@
+:root {
+  --background-clr: #223341;
+  --text-Clr: #ffae21;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.before-schedule {
+  background-color: white;
+  border: 20px solid var(--background-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 200vh;
+}
+
+#sign-up {
+  color: white;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
+  outline: 1px solid var(--txt-clr);
+
+}
+
+
+
+#sign-up:hover {
+
+  color: var(--background-clr);
+
+
+}
+
+#sign-up::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--txt-clr);
+  z-index: -1;
+  border-radius: 5px;
+  /* color: black; */
+  transition: 0.3s ease;
+}
+
+#sign-up:hover::before {
+  width: 100%;
+
+}
